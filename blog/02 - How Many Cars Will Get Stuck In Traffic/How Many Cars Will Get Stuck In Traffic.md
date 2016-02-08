@@ -5,7 +5,7 @@ The recent [riddle on FiveThirtyEight](http://fivethirtyeight.com/features/how-m
 
 I thought of the answer for a bit, and decided to simulate it, to gain some confidence, because nothing clear came to mind. So I deployed a `pymc` model. It is ofcourse an overkill - `pymc` is amazing at fitting stochastic variables to observed data, but in this case there is no data. Yet, `pymc` is a main tool for me these days, and I like to practice with it. Also, it's a really nice simulation framework.
 
-This post can also be found as an Jupyter notebook [Here]()
+This post can also be found as an Jupyter notebook [Here](https://github.com/DeanLa/DeanLa.github.io/blob/master/blog/02%20-%20How%20Many%20Cars%20Will%20Get%20Stuck%20In%20Traffic/How%20Many%20Cars%20Will%20Get%20Stuck%20In%20Traffic.ipynb)
 
 
 [code lang="python" highlight=""]
