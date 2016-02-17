@@ -1,6 +1,5 @@
 ig*
-*.xls
-*.xlsx
+
 *.log
 /blog/01 - Governement APIs or lack/csv/weeklies/*.xlsx
 /blog/01 - Governement APIs or lack/csv/weeklies/*.xls
