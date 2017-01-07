@@ -1,17 +1,8 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-
-# df = pd.DataFrame([[2001,151],[2002,160], [2006,211]], columns=['year','sale'])
-# print (df)
-# df.to_csv('./data.csv', index=False)
-# {'split','records','index','columns','values'}
-# plt.plot (df.x, df.y)
-# plt.show()
-
 from bs4 import BeautifulSoup
 import requests
 
-r = requests.get('https://en.wikipedia.org/wiki/Deaths_in_2017#January')
+r = requests.get('https://en.wikipedia.org/wiki/Deaths_in_January_2016')
 print(r.status_code)
 soup = BeautifulSoup(r.content, 'lxml')
 days_of_month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -45,4 +36,4 @@ data = {
 df = pd.DataFrame(data)
 df['total_deaths'] = df.deaths.cumsum()
 df = df[['year','month','day','deaths','total_deaths','html']]
-df.to_csv('./2017.csv', index=False)
+df.to_csv('./2016.csv', index=False)
