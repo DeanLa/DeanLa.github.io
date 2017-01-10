@@ -21,11 +21,11 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
     <!--<![endif]&ndash;&gt;-->
 
-    <title>My Random Stock</title>>
+    <title>My Random Stock</title>
 
 </head>
 <body>
@@ -58,8 +58,7 @@
         var one = first[Math.floor(Math.random() * first.length)];
         var two = second[Math.floor(Math.random() * second.length)];
         var three = third[Math.floor(Math.random() * third.length)];
-        var txt = one + ' ' + two + ' ' + three;
-        document.getElementById("stock").innerHTML = txt;
+        document.getElementById("stock").innerHTML = one + ' ' + two + ' ' + three;
     };
     moreStock();
     document.getElementById("change_stock").onclick = moreStock
