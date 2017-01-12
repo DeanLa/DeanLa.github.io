@@ -7,6 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Dean">
 
+    <meta name="description" content="RANDOM STOCK generator"/>
+    <meta property="og:description" content="RANDOM STOCK generator"/>
+    <meta property="og:locale" content="he_IL"/>
+    <meta property="og:site_name" content="My Random Stock"/>
+    <meta property="og:title" content="מוצר סטוק חדש"/>
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,6 +44,12 @@
         </div>
         <div class="col-sm-2"></div>
     </div>
+    <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"
+            scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;"
+            allowTransparency="true"></iframe>
+    <!--<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fdeanla.com%2Fstock%2F&layout=button&size=large&mobile_iframe=true&appId=259760160731955&width=72&height=28"-->
+            <!--width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"-->
+            <!--allowTransparency="true"></iframe>-->
 </div>
 
 <script src="../js/jquery.js"></script>
@@ -61,11 +72,11 @@
                 txt += item[Math.floor(Math.random() * item.length)];
                 txt += " ";
             });
-            txt = txt.slice(0,-1);
+            txt = txt.slice(0, -1);
             $("#stock").html(txt);
         }
         ;
-//    moreStock();
+    //    moreStock();
     $("#change_stock").click(moreStock);
 </script>
 </html>
