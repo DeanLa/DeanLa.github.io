@@ -31,13 +31,13 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 text-center">
             <h1>MY RANDOM STOCK</h1>
-            <h4 id="stock" class="center">text</h4>
-            <button class="btn btn-default" id="change_stock">הוסף מוצר</button>
+            <h4 id="stock" class="center">.ברוך הבא לחנות הסטוק. לחץ על "הוסף מוצר" על מנת לקבל מוצר חדש</h4>
+            <button class="btn btn-success" id="change_stock">הוסף מוצר</button>
         </div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-2"></div>
     </div>
 </div>
 
@@ -47,20 +47,25 @@
 <script src="../js/bootstrap.min.js"></script>
 </body>
 <script>
-    var first = ['פורס', 'קולף', 'חולץ', 'עטיפות', 'עוטף', 'פורם', 'מחזיק', 'מפלט', 'תבניות', 'מערוך',
-        'מפזר'];
-    var second = ['תפוחי אדמה', 'אבוקדו', 'בננות', 'גרביים', 'פלחים', 'ופלים', 'כיסים',
-        'אבק', 'רצפה', 'לקינוחים'];
-    var third = ['חשמלי', 'מכאני', '', '', 'לשבת', 'צהוב', 'עם פסים', 'למטבח', 'דיגיטאלי', '',
-        'שקוף', 'חד פעמי', 'הלו קיטי', 'ריחני'];
-
+    var items = [];
+    $.getJSON("stock.json", function (data) {
+        $.each(data, function (key, val) {
+//            tmp = {}
+            items.push(val);
+        })
+    });
+    console.log(items);
     var moreStock = function () {
-        var one = first[Math.floor(Math.random() * first.length)];
-        var two = second[Math.floor(Math.random() * second.length)];
-        var three = third[Math.floor(Math.random() * third.length)];
-        document.getElementById("stock").innerHTML = one + ' ' + two + ' ' + three;
-    };
-    moreStock();
-    document.getElementById("change_stock").onclick = moreStock
+            var txt = "";
+            $.each(items, function (i, item) {
+                txt += item[Math.floor(Math.random() * item.length)];
+                txt += " ";
+            });
+            txt = txt.slice(0,-1);
+            $("#stock").html(txt);
+        }
+        ;
+//    moreStock();
+    $("#change_stock").click(moreStock);
 </script>
 </html>
