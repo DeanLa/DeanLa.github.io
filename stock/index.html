@@ -2,12 +2,14 @@
 <html lang="he">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Random Stock</title>
     <meta name="description" content="">
     <meta name="author" content="Dean">
 
     <meta name="description" content="RANDOM STOCK generator"/>
+    <meta property="og:url" content="deanla.com/stock"/>
     <meta property="og:description" content="RANDOM STOCK generator"/>
     <meta property="og:locale" content="he_IL"/>
     <meta property="og:site_name" content="My Random Stock"/>
@@ -23,14 +25,13 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
           type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
     <!--<![endif]&ndash;&gt;-->
 
-    <title>My Random Stock</title>
 
 </head>
 <body>
@@ -65,7 +66,7 @@
             items.push(val);
         })
     });
-    console.log(items);
+//    console.log(items);
     var moreStock = function () {
             var txt = "";
             $.each(items, function (i, item) {
