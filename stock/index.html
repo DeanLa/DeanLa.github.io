@@ -16,7 +16,7 @@
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
-    type="text/css">
+          type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,10 +32,10 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4"></div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 text-center">
             <h1>MY RANDOM STOCK</h1>
-            <div id="stock" class="center">text</div>
-            <button id="change_stock">הוסף מוצר</button>
+            <h4 id="stock" class="center">text</h4>
+            <button class="btn btn-default" id="change_stock">הוסף מוצר</button>
         </div>
         <div class="col-sm-4"></div>
     </div>
@@ -50,9 +50,9 @@
     var first = ['פורס', 'קולף', 'חולץ', 'עטיפות', 'עוטף', 'פורם', 'מחזיק', 'מפלט', 'תבניות', 'מערוך',
         'מפזר'];
     var second = ['תפוחי אדמה', 'אבוקדו', 'בננות', 'גרביים', 'פלחים', 'ופלים', 'כיסים',
-        'אבק', 'רצפה'];
+        'אבק', 'רצפה', 'לקינוחים'];
     var third = ['חשמלי', 'מכאני', '', '', 'לשבת', 'צהוב', 'עם פסים', 'למטבח', 'דיגיטאלי', '',
-        'שקוף', 'חד פעמי'];
+        'שקוף', 'חד פעמי', 'הלו קיטי', 'ריחני'];
 
     var moreStock = function () {
         var one = first[Math.floor(Math.random() * first.length)];
