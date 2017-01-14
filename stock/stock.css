@@ -2,6 +2,7 @@ body {
     /*height: 100%;*/
     width: 100%;
     /*position: relative;*/
+    font-family: 'Alef', sans-serif ;
 }
 
 .bg {
@@ -33,6 +34,7 @@ body {
 
 #stock {
     margin: 0 0 35px 0;
+
 }
 
 .follow {
@@ -44,6 +46,7 @@ p {
 }
 
 #head-logo {
+    font-family: 'Alef', sans-serif ;
     background-color: red;
     color: yellow;
     width: 100%;
@@ -52,4 +55,8 @@ p {
 .btn {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+h1, h2, h3, h4, h5,h6 {
+        font-family: 'Alef', sans-serif ;
 }
