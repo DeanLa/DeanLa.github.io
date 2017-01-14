@@ -1,5 +1,5 @@
 body {
-    height: 100%;
+    /*height: 100%;*/
     width: 100%;
     position: relative;
 }
@@ -18,21 +18,38 @@ body {
 }
 
 #cart-well {
-    background-color: #d0bfb8
+    background-color: #dbdbdb;
 }
 
 .container {
     position: relative;
     padding-top: 30px;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 0;
-    height: 100%;
-    opacity:0.91;
+    min-height: 80%;
+    opacity: 0.91;
     border: red 2px solid;
 }
+
 #stock {
     margin: 0 0 35px 0;
 }
+
 .follow {
-    margin-top:60px;
+    margin-top: 60px;
+}
+
+p {
+    direction: rtl;
+}
+
+#head-logo {
+    background-color: red;
+    color: yellow;
+    width: 100%;
+    margin: 0;
+}
+.btn {
+    margin-left: 10px;
+    margin-right: 10px;
 }

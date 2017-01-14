@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Random Stock</title>
     <meta name="description" content="">
-    <meta name="author" content="Dean">
+    <meta name="author" content="Dean Langsam">
 
-    <meta name="description" content="RANDOM STOCK generator"/>
+    <meta name="description" content="מחולל מוצרי הסטוק  - מוצרי סטוק חדשים ורנדומליים בלחיצת כפתור"/>
     <meta property="og:url" content="deanla.com/stock/"/>
-    <meta property="og:description" content="RANDOM STOCK generator"/>
+    <meta property="og:description" content="מחולל מוצרי הסטוק  - מוצרי סטוק חדשים ורנדומליים בלחיצת כפתור"/>
     <meta property="og:locale" content="he_IL"/>
-    <meta property="og:site_name" content="My Random Stock"/>
-    <meta property="og:title" content="מוצר סטוק חדש"/>
+    <meta property="og:site_name" content="Random Stock"/>
+    <meta property="og:title" content="RANDOM סטוק - מחולל מוצרי הסטוק"/>
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../css/dean.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="stock.css">
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
@@ -29,13 +29,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="stock.css">
+
 
 </head>
 <body class="text-right">
 
 <!--<div class="background-img"></div>-->
-<div class="row text-center" style="background-color: red; color: yellow">
+<div class="row text-center" id="head-logo" style="">
     <div class="col-sm-12">
         <h1 style="margin-bottom: 0">סטוק RANDOM</h1>
         <span style="font-size: 5em; margin-top: 0"><i class="fa fa-shopping-cart"></i></span>
@@ -54,15 +54,19 @@
             <button class="btn btn-danger" id="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> הוסף
                 לעגלה
             </button>
+
             <button class="btn btn-success" id="change-stock">החלף מוצר</button>
 
+            <button class="btn btn-primary">שתף <i class="fa fa-facebook"></i></button>
             <!--<iframe class="text-right"-->
             <!--src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fdeanla.com%2Fstock%2F&layout=button&size=large&mobile_iframe=true&appId=259760160731955&width=72&height=28"-->
             <!--width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"-->
             <!--allowTransparency="true"></iframe>-->
         </div>
         <h3 class="follow">מחולל מוצרי הסטוק</h3>
-        <p>לחצו על "החלף מוצר" על מנת לחולל מוצר סטוק נוסף. אם המוצר לטעמך, הכפתור "הוסף לעגלה" יוסיף אותו לעגלת הקניות</p>
+        <p>הכפתור "החלף מוצר" (או הכפתור K במקלדת) יחולל עבורך מוצר סטוק נוסף.
+            <br/> אם המוצר לטעמך הכפתור "הוסף לעגלה" (או הכפתור L במקלדת) יוסיף אותו לעגלת הקניות.
+        </p>
         <div class="row follow">
             <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"
                     scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;"
