@@ -1,7 +1,7 @@
 body {
     /*height: 100%;*/
     width: 100%;
-    position: relative;
+    /*position: relative;*/
 }
 
 .bg {
@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    position: relative;
+    /*position: relative;*/
     padding-top: 30px;
     margin-top: 15px;
     margin-bottom: 0;
