@@ -9,7 +9,7 @@
     <meta name="author" content="Dean">
 
     <meta name="description" content="RANDOM STOCK generator"/>
-    <meta property="og:url" content="deanla.com/stock"/>
+    <meta property="og:url" content="deanla.com/stock/"/>
     <meta property="og:description" content="RANDOM STOCK generator"/>
     <meta property="og:locale" content="he_IL"/>
     <meta property="og:site_name" content="My Random Stock"/>
@@ -25,59 +25,119 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
           type="text/css">
 
-    <!--[if lt IE 9]>
-    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
-    <!--<![endif]&ndash;&gt;-->
+    <script src="../js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
 
 </head>
-<body>
+<body class="text-right">
+<!--<div class="background-img"></div>-->
 <div class="container">
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8 text-center">
-            <h1>MY RANDOM STOCK</h1>
-            <h4 id="stock" class="center">.ברוך הבא לחנות הסטוק. לחץ על "הוסף מוצר" על מנת לקבל מוצר חדש</h4>
-            <button class="btn btn-success" id="change_stock">הוסף מוצר</button>
-        </div>
-        <div class="col-sm-2"></div>
+    <div class="row text-center">
+        <h1>MY RANDOM STOCK</h1>
     </div>
-    <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"
-            scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;"
-            allowTransparency="true"></iframe>
-    <!--<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fdeanla.com%2Fstock%2F&layout=button&size=large&mobile_iframe=true&appId=259760160731955&width=72&height=28"-->
-            <!--width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"-->
-            <!--allowTransparency="true"></iframe>-->
+    <div class="row"></div>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 text-center">
+        <div class="row">
+            <h3 id="stock" class="center">
+                ברוכים הבאים
+            </h3>
+            <!--<h3 id="stock" class="center">.ברוך הבא לחנות הסטוק. לחץ על "הוסף מוצר" על מנת לקבל מוצר חדש</h3>-->
+            <button class="btn btn-danger" id="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> הוסף
+                לעגלה
+            </button>
+            <button class="btn btn-success" id="change-stock">החלף מוצר</button>
+
+            <iframe class="text-right"
+                    src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fdeanla.com%2Fstock%2F&layout=button&size=large&mobile_iframe=true&appId=259760160731955&width=72&height=28"
+                    width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true"></iframe>
+        </div>
+        <div class="row">
+            <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"
+                    scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;"
+                    allowTransparency="true"></iframe>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="well text-right">
+            <h3>העגלה שלי</h3>
+            <ul class="list-group" id="my-cart">
+
+                <!--<li class="list-group-item">קולף רצפה חשמלי-->
+                <!--<a href="#" class="badge badge-default pull-left cart-remove">-->
+                <!--X-->
+                <!--</a>-->
+                <!--</li>-->
+
+            </ul>
+        </div>
+    </div>
+
+
 </div>
+<!-- Footer -->
+<footer class="footer text-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
+                    <li>
+                        <a href="http://www.deanla.com">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="http://www.deanla.com#dean">About Me</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="http://blog.deanla.com">Blog</a>
+                    </li>
+                    <!--<li><a href="#">    <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"-->
+                    <!--scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;"-->
+                    <!--allowTransparency="true"></iframe></a></li>-->
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; Dean Langsam 2017. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-<script src="../js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../js/bootstrap.min.js"></script>
 </body>
+
+
 <script>
     var items = [];
     $.getJSON("stock.json", function (data) {
         $.each(data, function (key, val) {
-//            tmp = {}
+            console.log(val.length);
             items.push(val);
         })
     });
-//    console.log(items);
-    var moreStock = function () {
-            var txt = "";
-            $.each(items, function (i, item) {
-                txt += item[Math.floor(Math.random() * item.length)];
-                txt += " ";
-            });
-            txt = txt.slice(0, -1);
-            $("#stock").html(txt);
-        }
-        ;
-    //    moreStock();
-    $("#change_stock").click(moreStock);
+
+    function moreStock() {
+        var txt = "";
+        $.each(items, function (i, item) {
+            txt += item[Math.floor(Math.random() * item.length)];
+            txt += " ";
+        });
+        txt = txt.slice(0, -1);
+        $("#stock").html(txt);
+    }
+    function itemRemove(event) {
+        $(this).parent().remove()
+    }
+    function addToCart() {
+        var currentItem = $("#stock").html();
+        $("#my-cart").append('<li class="list-group-item">' +
+            currentItem +
+            '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
+        console.log(currentItem)
+    }
+    $("#change-stock").click(moreStock);
+    $("#my-cart").on("click", "li .cart-remove", itemRemove);
+    $("#add-to-cart").click(addToCart);
 </script>
 </html>
