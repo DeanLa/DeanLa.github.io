@@ -31,29 +31,30 @@
     <script src="../js/bootstrap.min.js"></script>
 
 </head>
-<body class="text-right">
+<body class="text-right" style="background: url('bg.jpg')">
 <!--<div class="background-img"></div>-->
-<div class="container">
-    <div class="row text-center">
-        <h1>MY RANDOM STOCK</h1>
-    </div>
+<div class="row text-center" style="background-color: red; color: yellow">
+    <h1 style="margin-bottom: 0">סטוק RANDOM</h1>
+    <span style="font-size: 5em; margin-top: 0"><i class="fa fa-shopping-cart"></i></span>
+</div>
+<div class="container well" style="padding-top: 30px; margin-top: 30px; margin-bottom: 0;min-height: 100%">
     <div class="row"></div>
     <div class="col-sm-3"></div>
     <div class="col-sm-6 text-center">
         <div class="row">
-            <h3 id="stock" class="center">
+            <h2 id="stock" class="center" style="margin: 0 0 30px 0;">
                 ברוכים הבאים
-            </h3>
+            </h2>
             <!--<h3 id="stock" class="center">.ברוך הבא לחנות הסטוק. לחץ על "הוסף מוצר" על מנת לקבל מוצר חדש</h3>-->
             <button class="btn btn-danger" id="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> הוסף
                 לעגלה
             </button>
             <button class="btn btn-success" id="change-stock">החלף מוצר</button>
 
-            <iframe class="text-right"
-                    src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fdeanla.com%2Fstock%2F&layout=button&size=large&mobile_iframe=true&appId=259760160731955&width=72&height=28"
-                    width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                    allowTransparency="true"></iframe>
+            <!--<iframe class="text-right"-->
+                    <!--src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fdeanla.com%2Fstock%2F&layout=button&size=large&mobile_iframe=true&appId=259760160731955&width=72&height=28"-->
+                    <!--width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"-->
+                    <!--allowTransparency="true"></iframe>-->
         </div>
         <div class="row">
             <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"
@@ -79,65 +80,65 @@
 
 </div>
 <!-- Footer -->
-<footer class="footer text-left">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-inline">
-                    <li>
-                        <a href="http://www.deanla.com">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="http://www.deanla.com#dean">About Me</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="http://blog.deanla.com">Blog</a>
-                    </li>
-                    <!--<li><a href="#">    <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"-->
-                    <!--scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;"-->
-                    <!--allowTransparency="true"></iframe></a></li>-->
-                </ul>
-                <p class="copyright text-muted small">Copyright &copy; Dean Langsam 2017. All Rights Reserved</p>
-            </div>
-        </div>
-    </div>
-</footer>
+<!--<footer class="footer text-left">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-lg-12">-->
+<!--<ul class="list-inline">-->
+<!--<li>-->
+<!--<a href="http://www.deanla.com">Home</a>-->
+<!--</li>-->
+<!--<li class="footer-menu-divider">&sdot;</li>-->
+<!--<li>-->
+<!--<a href="http://www.deanla.com#dean">About Me</a>-->
+<!--</li>-->
+<!--<li class="footer-menu-divider">&sdot;</li>-->
+<!--<li>-->
+<!--<a href="http://blog.deanla.com">Blog</a>-->
+<!--</li>-->
+<!--&lt;!&ndash;<li><a href="#">    <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"&ndash;&gt;-->
+<!--&lt;!&ndash;scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;"&ndash;&gt;-->
+<!--&lt;!&ndash;allowTransparency="true"></iframe></a></li>&ndash;&gt;-->
+<!--</ul>-->
+<!--<p class="copyright text-muted small">Copyright &copy; Dean Langsam 2017. All Rights Reserved</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</footer>-->
 
 </body>
 
+<script src="stock.js"></script>
+<!--<script>-->
+    <!--var items = [];-->
+    <!--$.getJSON("stock.json", function (data) {-->
+        <!--$.each(data, function (key, val) {-->
+            <!--console.log(val.length);-->
+            <!--items.push(val);-->
+        <!--})-->
+    <!--});-->
 
-<script>
-    var items = [];
-    $.getJSON("stock.json", function (data) {
-        $.each(data, function (key, val) {
-            console.log(val.length);
-            items.push(val);
-        })
-    });
-
-    function moreStock() {
-        var txt = "";
-        $.each(items, function (i, item) {
-            txt += item[Math.floor(Math.random() * item.length)];
-            txt += " ";
-        });
-        txt = txt.slice(0, -1);
-        $("#stock").html(txt);
-    }
-    function itemRemove(event) {
-        $(this).parent().remove()
-    }
-    function addToCart() {
-        var currentItem = $("#stock").html();
-        $("#my-cart").append('<li class="list-group-item">' +
-            currentItem +
-            '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
-        console.log(currentItem)
-    }
-    $("#change-stock").click(moreStock);
-    $("#my-cart").on("click", "li .cart-remove", itemRemove);
-    $("#add-to-cart").click(addToCart);
-</script>
+    <!--function moreStock() {-->
+        <!--var txt = "";-->
+        <!--$.each(items, function (i, item) {-->
+            <!--txt += item[Math.floor(Math.random() * item.length)];-->
+            <!--txt += " ";-->
+        <!--});-->
+        <!--txt = txt.slice(0, -1);-->
+        <!--$("#stock").html(txt);-->
+    <!--}-->
+    <!--function itemRemove(event) {-->
+        <!--$(this).parent().remove()-->
+    <!--}-->
+    <!--function addToCart() {-->
+        <!--var currentItem = $("#stock").html();-->
+        <!--$("#my-cart").append('<li class="list-group-item">' +-->
+            <!--currentItem +-->
+            <!--'<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');-->
+        <!--console.log(currentItem)-->
+    <!--}-->
+    <!--$("#change-stock").click(moreStock);-->
+    <!--$("#my-cart").on("click", "li .cart-remove", itemRemove);-->
+    <!--$("#add-to-cart").click(addToCart);-->
+<!--</script>-->
 </html>
