@@ -1,0 +1,38 @@
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bg {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /*opacity: 0.5;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0.1;
+}
+
+#cart-well {
+    background-color: #d0bfb8
+}
+
+.container {
+    position: relative;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    height: 100%;
+    opacity:0.91;
+    border: red 2px solid;
+}
+#stock {
+    margin: 0 0 35px 0;
+}
+.follow {
+    margin-top:60px;
+}
