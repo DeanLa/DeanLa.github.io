@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <title>My Random Stock</title>
     <link rel="shortcut icon" type="image/x-icon" href="ogpic.png">
     <meta name="description" content="">
@@ -14,7 +14,7 @@
     <meta property="og:description" content="מחולל מוצרי הסטוק  - מוצרי סטוק חדשים ורנדומליים בלחיצת כפתור"/>
     <meta property="og:locale" content="he_IL"/>
     <meta property="og:site_name" content="Random Stock"/>
-    <meta property="og:image" content="http://www.deanla.conm/stock/ogpic.png">
+    <meta property="og:image" content="http://i.imgur.com/277lERv.png">
     <meta property="og:title" content="RANDOM סטוק - מחולל מוצרי הסטוק"/>
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -32,10 +32,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/fbui.js"></script>
 
 
 </head>
 <body class="text-right">
+<div id="fb-root"></div>
+
 
 <!--<div class="background-img"></div>-->
 <div class="row text-center" id="head-logo" style="">
@@ -44,7 +47,7 @@
         <span style="font-size: 5em; margin-top: 0"><i class="fa fa-shopping-cart"></i></span>
     </div>
 </div>
-<div class="bg"></div>
+<div id="bg"></div>
 <div class="container well">
     <div class="row"></div>
     <div class="col-sm-3"></div>
@@ -53,22 +56,29 @@
             <h2 id="stock" class="center" style="">
                 ברוכים הבאים
             </h2>
-            <!--<h3 id="stock" class="center">.ברוך הבא לחנות הסטוק. לחץ על "הוסף מוצר" על מנת לקבל מוצר חדש</h3>-->
-            <button class="btn btn-danger" id="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> הוסף
-                לעגלה
-            </button>
+            <div class="row">
+                <div class="col-sm-4 col-sm-push-4">
+                    <button class="btn btn-success" id="change-stock">החלף מוצר
+                        <i class="fa fa-repeat" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-sm-4 col-sm-pull-4">
+                    <button class="btn btn-danger" id="add-to-cart">הוסף לעגלה
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                </div>
 
-            <button class="btn btn-success" id="change-stock">החלף מוצר</button>
+                <div class="col-sm-4">
+                    <!--<button class="btn btn-primary fb-share-button" data-href="http://deanla.com/stock/"-->
+                    <!--data-layout="button_count"-->
+                    <!--data-size="large" data-mobile-iframe="true"> Hi-->
+                    <!--<a class="fb-xfbml-parse-ignore" target="_blank"-->
+                    <!--href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdeanla.com%2Fstock%2F&amp;src=sdkpreparse">Share</a>-->
+                    <!--</button>-->
+                    <button class="btn btn-primary" id="fb-share">שתף
+                        <i class="fa fa-facebook" aria-hidden="true"></i></button>
+                </div>
 
-            <button class="btn btn-primary">
-
-                שתף <i class="fa fa-facebook"></i>
-
-            </button>
-            <!--<iframe class="text-right"-->
-            <!--src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fdeanla.com%2Fstock%2F&layout=button&size=large&mobile_iframe=true&appId=259760160731955&width=72&height=28"-->
-            <!--width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"-->
-            <!--allowTransparency="true"></iframe>-->
+            </div>
         </div>
         <h3 class="follow">מחולל מוצרי הסטוק</h3>
         <p>הכפתור "החלף מוצר" (או הכפתור K במקלדת) יחולל עבורך מוצר סטוק נוסף.
@@ -76,7 +86,8 @@
         </p>
         <div class="row follow">
             <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"
-                    scrolling="no" frameborder="0" style="border:none; overflow:hidden;  height:80px;"
+                    scrolling="no" frameborder="0"
+                    style="border:none; overflow:hidden;  height:80px; width: 100%;"
                     allowTransparency="true"></iframe>
         </div>
     </div>
@@ -90,7 +101,12 @@
 
 
 </div>
-
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 </body>
 
 <script src="stock.js"></script>
