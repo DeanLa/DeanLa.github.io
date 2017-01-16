@@ -45,8 +45,9 @@ $("#fb-share").on("click", function () {
         method: 'share',
         display: 'popup',
         href: 'http://deanla.com/stock/',
-        quote: "קניתי" + currentItem+
-            "בחנות הראנדום סטוק!"
+        quote: "קניתי " + currentItem+
+            " בחנות הראנדום סטוק!!! " +
+            ""
         // hashtag: "hashtag stock"
     }, function (response) {
     });
