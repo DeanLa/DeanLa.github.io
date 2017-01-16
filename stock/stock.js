@@ -39,12 +39,15 @@ $("#change-stock").click(moreStock);
 $("#my-cart").on("click", "li .cart-remove", itemRemove);
 $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
+    var currentItem = $("#stock").html();
     FB.ui({
+
         method: 'share',
         display: 'popup',
         href: 'http://deanla.com/stock/',
-        quote: "quote stock",
-        hashtag: "hashtag stock"
+        quote: "קניתי" + currentItem+
+            "בחנות הראנדום סטוק!"
+        // hashtag: "hashtag stock"
     }, function (response) {
     });
 });
