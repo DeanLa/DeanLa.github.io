@@ -52,7 +52,7 @@ $("#change-stock").click(moreStock);
 $cart.on("click", "li .cart-remove", itemRemove);
 $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
-    var currentItem = $("#stock").html();
+    var currentItem = $stock.html();
     FB.ui({
 
         method: 'share',
@@ -78,7 +78,8 @@ $("body").keypress(function (event) {
     }
 
 });
-// Handle Mobile
+
+///////// Handle Mobile
 
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)
@@ -97,6 +98,8 @@ if ($.browser.mobile) {
 // var csvContent = "data:text/csv;charset=utf-8,";
 // var draws = [];
 
+
+////////DATA DOWNLOAD
 // $("#fb-share").on("click", function () {
 //     for (var i = 0; i < 100000; i++) {
 //         res = moreStock();
