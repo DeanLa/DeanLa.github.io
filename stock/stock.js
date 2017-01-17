@@ -3,11 +3,17 @@
  */
 var items = [];
 $.getJSON("stock.json", function (data) {
+    quantity = 1;
+    // console.log(quantity);
     $.each(data, function (key, val) {
         console.log(val.length);
+        // console.log(quantity);
+        quantity = quantity * (val.length - 1);
         items.push(val);
     });
     moreStock();
+    console.log(quantity)
+    $("#quantity").html(quantity);
 });
 
 function moreStock() {
