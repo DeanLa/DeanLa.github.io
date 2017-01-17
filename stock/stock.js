@@ -2,6 +2,9 @@
  * Created by Dean on 14-Jan-17.
  */
 var items = [];
+var chance = Chance();
+var $cart = $("#my-cart");
+var $stock = $("#stock");
 $.getJSON("stock.json", function (data) {
     quantity = 1;
     // console.log(quantity);
@@ -18,23 +21,27 @@ $.getJSON("stock.json", function (data) {
 
 function moreStock() {
     var txt = "";
-    var whichVars = [];
+    // var whichVars = [];
     $.each(items, function (i, item) {
-        idx = Math.floor(Math.random() * item.length)
+        // idx = Math.floor(Math.random() * item.length);
+        idx = chance.integer({min:0, max:item.length - 1});
         txt += item[idx];
         txt += " ";
-        whichVars.push(idx);
+        // whichVars.push(idx);
     });
+    // console.log(whichVars)
     txt = txt.slice(0, -1);
-    $("#stock").html(txt);
-    return whichVars;
+    $stock.html(txt);
+    // return whichVars;
 }
 function itemRemove() {
     $(this).parent().remove()
 }
+
+
 function addToCart() {
-    var currentItem = $("#stock").html();
-    $("#my-cart").append('<li class="list-group-item">' +
+    var currentItem = $stock.html();
+    $cart.append('<li class="list-group-item">' +
         currentItem +
         '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
     // console.log(currentItem)
@@ -42,7 +49,7 @@ function addToCart() {
 
 
 $("#change-stock").click(moreStock);
-$("#my-cart").on("click", "li .cart-remove", itemRemove);
+$cart.on("click", "li .cart-remove", itemRemove);
 $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
     var currentItem = $("#stock").html();
@@ -53,8 +60,8 @@ $("#fb-share").on("click", function () {
         href: 'http://deanla.com/stock/',
         quote: "קניתי " + currentItem +
         " בחנות הראנדום סטוק!!! " +
-        ""
-        // hashtag: "hashtag stock"
+        "",
+        hashtag: "$RANDOM_STOCK"
     }, function (response) {
     });
 });
