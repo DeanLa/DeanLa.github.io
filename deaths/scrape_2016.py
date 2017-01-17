@@ -13,7 +13,7 @@ month = []
 day = []
 html = []
 deaths = []
-
+date_in_year = []
 for mn in month_name:
     pass
 for d in range(1, days_of_month[0] + 1):
@@ -27,8 +27,10 @@ for d in range(1, days_of_month[0] + 1):
     day.append(d)
     month.append(1)
     year.append(2017)
+    date_in_year.append('{:02d}{:02d}'.format(1, d))
     deaths.append(len(persons('li')))
 data = {
+    'date_in_year': date_in_year,
     'year': year,
     'month': month,
     'day': day,
@@ -37,5 +39,6 @@ data = {
 }
 df = pd.DataFrame(data)
 df['total_deaths'] = df.deaths.cumsum()
-df = df[['year','month','day','deaths','total_deaths','html']]
+# df = df[['year','month','day','deaths','total_deaths','html']]
+df = df[['date_in_year','deaths','total_deaths','html']]
 df.to_csv('./2016.csv', index=False)
