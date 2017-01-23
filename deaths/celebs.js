@@ -9,7 +9,7 @@ var margin = {top: 10, right: 10, bottom: 100, left: 40},
 
 var color = d3.scale.category10();
 
-var parseDate = d3.time.format("%Y%m").parse;
+var parseDate = d3.time.format("%m%d").parse;
 
 var x = d3.time.scale().range([0, width]),
     x2 = d3.time.scale().range([0, width]),
@@ -64,7 +64,7 @@ var focus = svg.append("g")
 var context = svg.append("g")
     .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
-d3.csv("climate4.csv", function (error, data) {
+d3.csv("2016.csv", function (error, data) {
 
     color.domain(d3.keys(data[0]).filter(function (key) {
         return key !== "date";

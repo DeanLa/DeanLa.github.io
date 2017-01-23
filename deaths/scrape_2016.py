@@ -3,9 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 from calendar import month_name
 import sys
-r = requests.get('https://en.wikipedia.org/wiki/Deaths_in_January_2016')
-print(r.status_code)
-soup = BeautifulSoup(r.content, 'lxml')
+# r = requests.get('https://en.t, 'lxml')
 days_of_month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 year = []
@@ -14,21 +12,26 @@ day = []
 html = []
 deaths = []
 date_in_year = []
-for mn in month_name:
-    pass
-for d in range(1, days_of_month[0] + 1):
-    day_current = soup.find(class_='mw-headline', id=d)
-    if day_current is None:
-        # print(d, "Not exist")
+
+for mi, mn in enumerate(month_name):
+    if mi == 0:
         continue
-    persons = day_current.parent.find_next_sibling('ul')
-    #TODO: html.append(persons.prettify())
-    html.append('X')
-    day.append(d)
-    month.append(1)
-    year.append(2017)
-    date_in_year.append('{:02d}{:02d}'.format(1, d))
-    deaths.append(len(persons('li')))
+    r = requests.get('https://en.wikipedia.org/wiki/Deaths_in_{}_2016'.format(mn))
+    print('https://en.wikipedia.org/wiki/Deaths_in_{}_2016'.format(mn), r.status_code)
+    soup = BeautifulSoup(r.content, 'lxml')
+    for d in range(1, days_of_month[0] + 1):
+        day_current = soup.find(class_='mw-headline', id=d)
+        if day_current is None:
+            continue
+        persons = day_current.parent.find_next_sibling('ul')
+        # snippet = persons.prettify()
+        # html.append(snippet)
+        html.append('X')
+        day.append(d)
+        month.append(mi)
+        year.append(2016)
+        date_in_year.append('{:02d}{:02d}'.format(mi, d))
+        deaths.append(len(persons('li')))
 data = {
     'date_in_year': date_in_year,
     'year': year,

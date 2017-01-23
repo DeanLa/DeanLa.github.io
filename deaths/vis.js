@@ -1,28 +1,9 @@
 /**
  * Created by Dean on 02-Jan-17.
  */
-// Load the Data
-// var data = [{
-//     "sale": "202",
-//     "year": "2000"
-// }, {
-//     "sale": "215",
-//     "year": "2002"
-// }, {
-//     "sale": "179",
-//     "year": "2004"
-// }, {
-//     "sale": "199",
-//     "year": "2006"
-// }, {
-//     "sale": "134",
-//     "year": "2008"
-// }, {
-//     "sale": "176",
-//     "year": "2010"
-// }];
 
-var xCol = "day";
+
+var xCol = "date_in_year";
 var yCol = "total_deaths";
 var WIDTH = 1200;
 var HEIGHT = 600;
@@ -34,13 +15,15 @@ var MARGINS = {
 };
 var vis = d3.select("#visualisation");
 vis.attr("width", WIDTH).attr("height", HEIGHT);
-var xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([1, 30]);
-// var xScale = d3.time.scale().range([MARGINS.left, WIDTH - MARGINS.right])
+// var xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([1, 30]);
+var parseDate = d3.time.format("%m%d").parse;
+var xScale = d3.time.scale().range([MARGINS.left, WIDTH - MARGINS.right])
+    .domain([parseDate("0101"), parseDate("0131")]);
 var yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0, 700]);
 var xAxis = d3.svg.axis()
     .scale(xScale)
     .orient("bottom");
-    // .ticks(2);
+// .ticks(2);
 var yAxis = d3.svg.axis()
     .scale(yScale)
     .orient("left");
@@ -64,23 +47,23 @@ var lineGen = d3.svg.line()
     .interpolate("linear");
 
 function type(d) {
-    console.log(d[xCol])
-    console.log(d[yCol])
-    d[xCol] = +d[xCol];
+    // console.log(d[xCol])
+    // console.log(d[yCol])
+    d[xCol] = parseDate(d[xCol]);
     d[yCol] = +d[yCol];
     return d
 }
 
 function render(d) {
     vis.append('svg:path')
-    .attr('d', lineGen(d))
-    .attr('stroke', 'green')
-    .attr('stroke-width', 2)
-    .attr('fill', 'none');
+        .attr('d', lineGen(d))
+        .attr('stroke', 'green')
+        .attr('stroke-width', 2)
+        .attr('fill', 'none');
 }
 
- d3.csv("./2016.csv", type, render);
- d3.csv("./2017.csv", type, render);
+d3.csv("./2016.csv", type, render);
+d3.csv("./2017.csv", type, render);
 
 xAxisG.call(xAxis);
 yAxisG.call(yAxis);
