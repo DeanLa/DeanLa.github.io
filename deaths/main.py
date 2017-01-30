@@ -27,9 +27,12 @@ date_in_year = []
 for d in range(1, days_of_month[0] + 1):
     day_current = soup.find(class_='mw-headline', id=d)
     if day_current is None:
-        # print(d, "Not exist")
         continue
-    persons = day_current.parent.find_next_sibling('ul')
+    persons = day_current.parent.find_next_sibling()
+    if persons.name != 'ul':
+        continue
+    # print (persons.name)
+    # print ('\n\n\n')
     #TODO: html.append(persons.prettify())
     html.append('X')
     day.append(d)
@@ -50,3 +53,11 @@ df['total_deaths'] = df.deaths.cumsum()
 # df = df[['year','month','day','deaths','total_deaths','html']]
 df = df[['date_in_year','deaths','total_deaths','html']]
 df.to_csv('./2017.csv', index=False)
+
+import os
+import datetime
+print (os.getcwd())
+
+# os.system('git add 2017.csv')
+# os.system('git commit -m "Data {}"'.format(datetime.datetime.now()))
+# os.system('git push origin master')

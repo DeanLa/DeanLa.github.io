@@ -54,7 +54,9 @@ function type(d) {
     return d
 }
 
-function render(d) {
+function render(d, year) {
+    console.log("YEAR: ", year);
+    console.log("YEAR: ", year);
     vis.append('svg:path')
         .attr('d', lineGen(d))
         .attr('stroke', 'green')
@@ -62,8 +64,8 @@ function render(d) {
         .attr('fill', 'none');
 }
 
-d3.csv("./2016.csv", type, render);
-d3.csv("./2017.csv", type, render);
-
+d3.csv("./2016.csv", type, render, 2016);
+d3.csv("./2017.csv", type, render, 2017);
+console.log("TEST");
 xAxisG.call(xAxis);
 yAxisG.call(yAxis);

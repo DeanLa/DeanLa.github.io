@@ -1,5 +1,5 @@
 body {
-    font-family: 'Alef', sans-serif;
+    font-family: 'Alef', sans-serif !important;
 }
 .axis path {
     fill: none;
@@ -27,6 +27,7 @@ svg {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
+
 }
 
 .brush .extent {
@@ -37,4 +38,23 @@ svg {
 
 .line {
     fill: none;
+    stroke-width: 3;
+    /*opacity: 0.5*/
+}
+
+.y2016 {
+    stroke: #3D9CD0
+}
+
+.y2017 {
+    stroke: #EE5438
+}
+#visualisation{
+    background-color: #F0F0F0;
+        font-family: 'Alef', sans-serif;
+}
+
+.legend{
+    font-size: 16px;
+    font-family: 'Alef', sans-serif;
 }
