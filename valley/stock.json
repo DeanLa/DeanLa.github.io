@@ -1,0 +1,97 @@
+{
+  "speaker": [
+    "It is ",
+    "We are ",
+    "The prouct is ",
+    "Our product is "
+  ],
+  "analogy": [
+    "like ",
+    "basically ",
+    "essentially "
+  ],
+  "company": [
+    "Google ",
+    "Facebook ",
+    "Intel ",
+    "Amazon ",
+    "Apple ",
+    "Samsung ",
+    "Uber ",
+    "Lyft ",
+    "Oracle ",
+    "Spark ",
+    "Ebay ",
+    "Amdocs ",
+    "Waze ",
+    "AirBNB ",
+    "Whatsapp",
+    "Yelp ",
+    "WeWork ",
+    "Shopify "
+
+  ],
+  "for":[
+    "for ",
+    "but for ",
+    "only for ",
+    "but with "
+    ],
+  "vertical": [
+    "web search.",
+    "social networks.",
+    "micro-proccessors.",
+    "your database."
+  ],
+  "LB":["<br>"],
+  "itis":[
+    "It is ",
+    "we deploy ",
+    "we employ "
+
+],
+  "product":[
+    "a database ",
+    "a service ",
+    "a search engine ",
+    "an app ",
+    "a web framework ",
+    "a social network ",
+    "Python ",
+    "GO ",
+    "GPS ",
+    "ReactJS ",
+    "RESTful APIs ",
+    "Map-Reduce ",
+    "game theory "
+  ],
+  "aaS":[
+    "as a service ",
+    ""],
+  "for2":["for "],
+  "action":[
+    "harnessing the power of ",
+    "sexually harassing ",
+    "feature engineering ",
+    "indexing ",
+    "searching ",
+    "version controlling ",
+    "sorting ",
+    "storing tera-bytes of "
+
+  ],
+  "noun":[
+    "the sun.",
+    "teens.",
+    "priviliged white assholes.",
+    "you data.",
+    "databases.",
+    "key-value pairs.",
+    "social influencers.",
+    "podcasts.",
+    "BIG DATA.",
+    "Morgan Freeman.",
+    "Donald Trump.",
+    ""
+  ]
+}
