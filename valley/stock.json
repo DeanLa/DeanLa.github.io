@@ -2,7 +2,7 @@
   "speaker": [
     "It is ",
     "We are ",
-    "The prouct is ",
+    "The product is ",
     "Our product is "
   ],
   "analogy": [
@@ -40,9 +40,8 @@
     "but for ",
     "only for ",
     "but with ",
-    "but aimed at",
-    "only focused on",
-    ""
+    "but aimed at ",
+    "only focused on "
   ],
   "vertical": [
     "web search.",
@@ -50,7 +49,6 @@
     "micro-processors.",
     "your database.",
     "your smartphone.",
-    "basketball.",
     "image recognition.",
     "autonomous vehicles.",
     "the private sector.",
@@ -59,13 +57,13 @@
     "fashion models",
     "Python.",
     "joint work spaces.",
-    "restaurant reviews ",
-    "movie reviews ",
-    "food reviews ",
-    "public transportation ",
+    "restaurant reviews.",
+    "movie reviews.",
+    "food reviews.",
+    "public transportation.",
     "lawyers.",
     "sports shoes.",
-    "deep learning. "
+    "deep learning."
   ],
   "LB": [
     "<br>"
@@ -133,8 +131,8 @@
     "lasers.",
     "Mark Zuckerberg's gray shirts.",
     "logs.",
-    "configuration files",
-    "hash tables",
-    "basketball legend Magic Johnson"
+    "configuration files.",
+    "hash tables.",
+    "basketball legend Magic Johnson."
   ]
 }
