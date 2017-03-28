@@ -29,28 +29,28 @@
     "Yelp ",
     "WeWork ",
     "Shopify "
-
   ],
-  "for":[
+  "for": [
     "for ",
     "but for ",
     "only for ",
     "but with "
-    ],
+  ],
   "vertical": [
     "web search.",
     "social networks.",
     "micro-proccessors.",
     "your database."
   ],
-  "LB":["<br>"],
-  "itis":[
+  "LB": [
+    "<br>"
+  ],
+  "itis": [
     "It is ",
     "we deploy ",
     "we employ "
-
-],
-  "product":[
+  ],
+  "product": [
     "a database ",
     "a service ",
     "a search engine ",
@@ -63,13 +63,19 @@
     "ReactJS ",
     "RESTful APIs ",
     "Map-Reduce ",
-    "game theory "
+    "game theory ",
+    "an accelerator "
   ],
-  "aaS":[
+  "aaS": [
     "as a service ",
-    ""],
-  "for2":["for "],
-  "action":[
+    "middleware ",
+    "",
+    ""
+  ],
+  "for2": [
+    "for "
+  ],
+  "action": [
     "harnessing the power of ",
     "sexually harassing ",
     "feature engineering ",
@@ -77,10 +83,10 @@
     "searching ",
     "version controlling ",
     "sorting ",
-    "storing tera-bytes of "
-
+    "storing tera-bytes of ",
+    ""
   ],
-  "noun":[
+  "noun": [
     "the sun.",
     "teens.",
     "priviliged white assholes.",
@@ -91,7 +97,6 @@
     "podcasts.",
     "BIG DATA.",
     "Morgan Freeman.",
-    "Donald Trump.",
-    ""
+    "Donald Trump."
   ]
 }

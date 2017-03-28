@@ -17,7 +17,7 @@ $.getJSON("stock.json", function (data) {
     quantity = 1;
     // console.log(quantity);
     $.each(data, function (key, val) {
-        console.log(val.length);
+        // console.log(val.length);
         // console.log(quantity);
         quantity = quantity * (val.length);
         items.push(val);
