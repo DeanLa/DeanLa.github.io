@@ -11,23 +11,24 @@
     <meta charset="UTF-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <title>My Random Stock</title>
+    <title>ל</title>
+    <!-- TODO -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <meta name="description" content="">
     <meta name="author" content="Dean Langsam">
 
-    <meta name="description" content="מחולל מוצרי הסטוק  - מוצרי סטוק חדשים ורנדומליים בלחיצת כפתור"/>
-    <meta property="og:url" content="http://deanla.com/stock/"/>
-    <meta property="og:description" content="מחולל מוצרי הסטוק  - מוצרי סטוק חדשים ורנדומליים בלחיצת כפתור"/>
-    <meta property="og:locale" content="he_IL"/>
-    <meta property="og:site_name" content="Random Stock"/>
-    <meta property="og:image" content="http://www.deanla.com/stock/ogpic.png">
-    <meta property="og:title" content="ראנדום סטוק - מחולל מוצרי הסטוק! כלי מטבח אקראיים, מוצרים לבית ועוד"/>
+    <meta name="description" content="Raise your next 1M$ with a click of a button"/>
+    <meta property="og:url" content="http://deanla.com/valley/"/>
+    <meta property="og:description" content="Startup pitch generator - Don't trust just arbitrary pitches, generate them!"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:image" content="http://www.deanla.com/valley/ogpic.png">
+    <meta property="og:title" content="Random Pitch - pitch your startup"/>
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css/dean.css" rel="stylesheet">
+    <!-- <link href="../css/dean.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="stock.css">
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -51,26 +52,26 @@
 <!--<div class="background-img"></div>-->
 <div class="row text-center" id="head-logo" style="">
     <div class="col-sm-12">
-        <h1 style="margin-bottom: 0">סטוק RANDOM</h1>
-        <span style="font-size: 5em; margin-top: 0"><i class="fa fa-shopping-cart"></i></span>
+        <h1 style="margin-bottom: 0">My Startup</h1>
     </div>
 </div>
 <div id="bg"></div>
 <div class="container well">
-    <div class="row"></div>
+    <div class="row">
 
-    <div class="col-sm-6 text-center col-sm-push-3" id="main-part">
+    <div class="col-sm-12 text-center zcol-sm-push-3" id="main-part">
         <div class="row">
-            <h2 id="stock" class="center" style="">
-                ברוכים הבאים
-            </h2>
+            <div id="stock" class="center" style="">
+                The investor will be here momentarily
+            </div>
+            <h3></h3>
             <div class="row">
                 <div class="col-sm-4 col-sm-push-4">
                     <button class="btn btn-success" id="change-stock">Another Pitch
                         <i class="fa fa-repeat" aria-hidden="true"></i></button>
                 </div>
                 <div class="col-sm-4 col-sm-pull-4">
-                    <button class="btn btn-danger" id="add-to-cart">הוסף לעגלה
+                    <button class="btn btn-danger" id="add-to-cart">Add Slide
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -83,8 +84,8 @@
             </div>
         </div>
         <h3 class="follow">My First Startup</h3>
-        <p id="instructions">Click "Another Pitch"<span class="web-only"> (Or press K)</span> if you think this ones does not fully
-            <br/>if you like<span class="web-only"> (Or press L)</span> TODO
+        <p id="instructions">Click "Another Pitch"<span class="web-only"> (Or press K)</span> if you think this ones does not fully capture the company's essence
+            <br/>if you like the current pitch Click "Add Slide" <span class="web-only"> (Or press L)</span> tp add it to your deck.
         </p>
         <!--<h2>-->
             <!--Over <span id="quantity">1</span> different-->
@@ -96,9 +97,11 @@
                     allowTransparency="true"></iframe>
         </div>
     </div>
-    <div class="col-sm-3 col-sm-push-3">
+    </div>
+    <div class="row">
+    <div class="col-sm-6 col-sm-push-3">
         <div class="well text-right" id="cart-well">
-            <h3>העגלה שלי</h3>
+            <h3>My Slides</h3>
             <ul class="list-group" id="my-cart">
             </ul>
         </div>
@@ -106,6 +109,7 @@
     <div class="col-sm-3 col-sm-pull-9">
         <!--ads-->
         <!--<div class="well">asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd </div>-->
+    </div>
     </div>
 
 </div>

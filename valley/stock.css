@@ -15,7 +15,7 @@ body {
     top: 0;
     left: 0;
     z-index: -10;
-    opacity: 0.1;
+    opacity: 0.18;
 }
 
 #cart-well {
@@ -28,8 +28,8 @@ body {
     margin-top: 15px;
     margin-bottom: 0;
     min-height: 80%;
-    opacity: 0.91;
-    border: red 2px solid;
+    opacity: 0.85;
+    /*border: red 2px solid;*/
 }
 
 #stock {
@@ -41,16 +41,17 @@ body {
     margin-top: 20px;
 }
 
-/*p, h2 {*/
-    /*direction: rtl;*/
-/*}*/
 
 #head-logo {
-    font-family: 'Alef', sans-serif ;
-    background-color: red;
+    /*font-family: 'Alef', sans-serif ;*/
+    /*background-color: red;*/
+    padding-top: 100px;
+    padding-bottom: 100px;
     color: yellow;
     width: 100%;
     margin: 0;
+    background: url(intro-bg55.jpg) no-repeat center center;
+    background-size: cover;
 }
 .btn {
     /*margin-left: 10px;*/

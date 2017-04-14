@@ -1,4 +1,7 @@
 {
+  "h": [
+    "<h1>"
+  ],
   "speaker": [
     "It is ",
     "We are ",
@@ -13,14 +16,17 @@
   "company": [
     "Google ",
     "Facebook ",
-    "Intel ",
+    "Twitter ",
+    "Instagram ",
     "Amazon ",
-    "Apple ",
-    "Samsung ",
+    "iPad ",
+    "an app store ",
     "Uber ",
     "Lyft ",
     "Oracle ",
-    "Spark ",
+    "Apache Spark ",
+    "Y Combinator ",
+    "Wikipedia ",
     "Ebay ",
     "Amdocs ",
     "Waze ",
@@ -29,11 +35,11 @@
     "Yelp ",
     "WeWork ",
     "Shopify ",
-    "Photoshop",
+    "Photoshop ",
     "Crunchbase ",
     "SpaceX ",
-    "Elon Musk "
-
+    "Elon Musk ",
+    "docker containers "
   ],
   "for": [
     "for ",
@@ -54,7 +60,7 @@
     "the private sector.",
     "the public sector.",
     "chess.",
-    "fashion models",
+    "fashion models.",
     "Python.",
     "joint work spaces.",
     "restaurant reviews.",
@@ -63,10 +69,11 @@
     "public transportation.",
     "lawyers.",
     "sports shoes.",
-    "deep learning."
+    "deep learning.",
+    "project management."
   ],
   "LB": [
-    "<br>"
+    "</h1><h2>"
   ],
   "itis": [
     "It is ",
@@ -84,6 +91,8 @@
     "GO ",
     "GPS ",
     "ReactJS ",
+    "AngularJS ",
+    "Bash scripts ",
     "RESTful APIs ",
     "Map-Reduce ",
     "game theory ",
@@ -92,8 +101,12 @@
     "a single-page application ",
     "a RFID tag ",
     "a NFC chip ",
-    "machine learning "
-
+    "machine learning ",
+    "a GUI ",
+    "a cloud ",
+    "an Apache license ",
+    "continuous integration",
+    "SEO "
   ],
   "aaS": [
     "as a service ",
@@ -114,14 +127,17 @@
     "sorting ",
     "storing tera-bytes of ",
     "designing ",
-    "online learning "
-
+    "online learning ",
+    "composing a symphony based solely upon ",
+    "extreme vetting ",
+    "automatically testing ",
+    "quickly deploying "
   ],
   "noun": [
     "the sun.",
     "teens.",
     "priviliged white assholes.",
-    "you data.",
+    "your data.",
     "databases.",
     "key-value pairs.",
     "social influencers.",
@@ -133,6 +149,13 @@
     "logs.",
     "configuration files.",
     "hash tables.",
-    "basketball legend Magic Johnson."
+    "basketball legend Magic Johnson.",
+    "faster than light space travel.",
+    "the feeling of being lonely.",
+    "augmented reality",
+    ""
+  ],
+  "h2": [
+    "</h2>"
   ]
 }
