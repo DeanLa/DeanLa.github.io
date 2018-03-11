@@ -1,0 +1,60 @@
+body {
+    font-family: 'Alef', sans-serif !important;
+}
+.axis path {
+    fill: none;
+    stroke: #777;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: 'Alef', sans-serif;
+    font-size: 13px;
+}
+
+svg {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.y.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+
+}
+
+.brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke-width: 3;
+    /*opacity: 0.5*/
+}
+
+.y2016 {
+    stroke: #3D9CD0
+}
+
+.y2017 {
+    stroke: #EE5438
+}
+#visualisation{
+    background-color: #F0F0F0;
+        font-family: 'Alef', sans-serif;
+}
+
+.legend{
+    /*font-family: 'Comic Sans MS', sans-serif;*/
+    font-size: 12px;
+}
