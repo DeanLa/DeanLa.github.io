@@ -1,8 +1,8 @@
 ig*
 z_*
 *.log
-/blog/01 - Governement APIs or lack/csv/weeklies/*.xlsx
-/blog/01 - Governement APIs or lack/csv/weeklies/*.xls
+/notebooks/01 - Governement APIs or lack/csv/weeklies/*.xlsx
+/notebooks/01 - Governement APIs or lack/csv/weeklies/*.xls
 
 .ipynb_checkpoints
 .ipynb_checkpoints/*

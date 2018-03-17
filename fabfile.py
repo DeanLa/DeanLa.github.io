@@ -90,3 +90,8 @@ def gh_pages():
     """Publish to GitHub Pages"""
     rebuild()
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+
+def newpost():
+    '''Create new post'''
+    from time import localtime
+    print (localtime())
