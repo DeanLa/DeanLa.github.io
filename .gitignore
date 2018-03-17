@@ -1,3 +1,4 @@
+/output/
 ig*
 z_*
 *.log
@@ -15,7 +16,6 @@ z_*
 .idea/*
 .idea/workspace.xml
 .idea/tasks.xml
-
 # Sensitive or high-churn files:
 .idea/dataSources/
 .idea/dataSources.ids
