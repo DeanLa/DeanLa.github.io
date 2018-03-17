@@ -66,4 +66,6 @@ EXTRA_PATH_METADATA = {
     'extra/custom.js': {'path': 'static/js/custom.js'}
 }
 # Uncomment following line if you want document-relative URLs when developing
+# SITEURL = 'http://deanla.com'
 # RELATIVE_URLS = True
+
