@@ -1,0 +1,66 @@
+body {
+    /*height: 100%;*/
+    width: 100%;
+    /*position: relative;*/
+    font-family: 'Alef', sans-serif ;
+}
+
+#bg {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /*opacity: 0.5;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0.1;
+}
+
+#cart-well {
+    background-color: #dbdbdb;
+}
+
+.container {
+    /*position: relative;*/
+    padding-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    min-height: 80%;
+    opacity: 0.91;
+    border: red 2px solid;
+}
+
+#stock {
+    margin: 0 0 35px 0;
+
+}
+
+.follow {
+    margin-top: 20px;
+}
+
+p, h2 {
+    direction: rtl;
+}
+
+#head-logo {
+    font-family: 'Alef', sans-serif ;
+    background-color: red;
+    color: yellow;
+    width: 100%;
+    margin: 0;
+}
+.btn {
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    width: 90%;
+    margin: 10px;
+    margin-top:0;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5,h6 {
+        font-family: 'Alef', sans-serif ;
+}
