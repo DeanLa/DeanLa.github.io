@@ -1,0 +1,25 @@
+{
+  "name": "Dean",
+  "sub-menu": [
+    {
+      "name": "imports",
+      "snippet": [
+        "import numpy as np",
+        "import pandas as pd",
+        "import matplotlib.pyplot as plt",
+        "%matplotlib inline"
+      ]
+    },
+    {
+      "name": "run once",
+      "snippet": [
+        "%load_ext autoreload",
+        "%autoreload 2",
+        "import sys",
+        "sys.path.append(\"../\")",
+        "from blog import set_blog_style",
+        "set_blog_style()"
+      ]
+    }
+  ]
+}

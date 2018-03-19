@@ -12,7 +12,7 @@ ARTICLE_PATHS = ['posts']
 
 TIMEZONE = 'Asia/Jerusalem'
 
-DEFAULT_LANG = 'English'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -63,7 +63,8 @@ STATIC_PATHS = [ 'extra' ]
 
 EXTRA_PATH_METADATA = {
     'extra/custom.css': {'path': 'static/css/custom.css'},
-    'extra/custom.js': {'path': 'static/js/custom.js'}
+    'extra/custom.js': {'path': 'static/js/custom.js'},
+    'extra/CNAME': {'path': 'CNAME'}
 }
 # Uncomment following line if you want document-relative URLs when developing
 # SITEURL = 'http://deanla.com'

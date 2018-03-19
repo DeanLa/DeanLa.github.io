@@ -74,24 +74,22 @@ def cf_upload():
               '-K {cloudfiles_api_key} '
               'upload -c {cloudfiles_container} .'.format(**env))
 
-@hosts(production)
-def publish():
-    """Publish to production via rsync"""
-    local('pelican -s publishconf.py')
-    project.rsync_project(
-        remote_dir=dest_path,
-        exclude=".DS_Store",
-        local_dir=DEPLOY_PATH.rstrip('/') + '/',
-        delete=True,
-        extra_opts='-c',
-    )
+# @hosts(production)
+# def publish():
+#     """Publish to production via rsync"""
+#     local('pelican -s publishconf.py')
+#     project.rsync_project(
+#         remote_dir=dest_path,
+#         exclude=".DS_Store",
+#         local_dir=DEPLOY_PATH.rstrip('/') + '/',
+#         delete=True,
+#         extra_opts='-c',
+#     )
 
 def gh_pages():
     """Publish to GitHub Pages"""
     rebuild()
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
 
-def newpost():
-    '''Create new post'''
-    from time import localtime
-    print (localtime())
+def publish():
+    gh_pages()
