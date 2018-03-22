@@ -31,14 +31,14 @@ LINKS = (('Pelican', 'http://getpelican.com/'),)
 # Social widget
 SOCIAL = (('Facebook', 'https://www.facebook.com/DeanLangsam'),
           ('LinkedIn', 'https://www.linkedin.com/in/deanla/'),
-          ('Github','https://github.com/DeanLa'))
+          ('Github', 'https://github.com/DeanLa'))
 
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['pelican-plugins']
 
-THEME = 'pelican-themes/pelican-bootstrap3'
-BOOTSTRAP_THEME = 'flatly'
+THEME = 'pelican-bootstrap3'
+BOOTSTRAP_THEME = 'united'
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGINS = [
@@ -53,20 +53,22 @@ PLUGINS = [
     'tipue_search']
 
 I18N_TEMPLATES_LANG = 'en'
-DIRECT_TEMPLATES = ('index','tags', 'categories', 'authors', 'archives', 'search')
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'authors', 'archives', 'search')
 
 # Custom CSS and JS
 CUSTOM_CSS = 'static/css/custom.css'
 CUSTOM_JS = 'static/js/custom.js'
+PYGMENTS_STYLE = 'monokai'
 
-STATIC_PATHS = [ 'extra' ]
+STATIC_PATHS = ['extra','apps']
 
 EXTRA_PATH_METADATA = {
     'extra/custom.css': {'path': 'static/css/custom.css'},
     'extra/custom.js': {'path': 'static/js/custom.js'},
-    'extra/CNAME': {'path': 'CNAME'}
+    'extra/CNAME': {'path': 'CNAME'},
+    'apps': {'path': 'apps'},
+
 }
 # Uncomment following line if you want document-relative URLs when developing
 # SITEURL = 'http://deanla.com'
 # RELATIVE_URLS = True
-
