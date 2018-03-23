@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="english" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<html lang="en"       prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml" >
 <head>
     <title>About Me - DeanLa</title>
     <!-- Using the latest rendering mode for IE -->
@@ -187,13 +187,15 @@ init_mathjax();
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.flatly.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/bootstrap.united.min.css"
+          type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="/theme/css/pygments/monokai.css"
+          rel="stylesheet">
     <link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
-        <link href="/static/css/custom.css" rel="stylesheet">
+    <link href="/static/css/custom.css" rel="stylesheet">
 
 
 
@@ -202,8 +204,9 @@ init_mathjax();
 </head>
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
+<div class="navbar navbar-default navbar-fixed-top"
+     role="navigation">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -216,16 +219,22 @@ DeanLa            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li class="active"><a href="/pages/about-me.html">
-                             About Me
-                          </a></li>
+                <li
+ class="active" ><a href="/pages/about-me.html">
+                    About Me
+                </a></li>
+                <li
+><a href="/pages/apps.html">
+                    Apps
+                </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><span>
+                <li><span>
                 <form class="navbar-search" action="/search.html">
-                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"
+                         required>
                 </form></span>
-              </li>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -236,6 +245,10 @@ DeanLa            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
+    <ol class="breadcrumb">
+        <li><a href="" title="DeanLa"><i class="fa fa-home fa-lg"></i></a></li>
+        <li class="active">About Me</li>
+    </ol>
     <section id="content" class="body">
         <h1 class="entry-title">About Me</h1>
         
@@ -243,9 +256,9 @@ DeanLa            </a>
             <p>I am currently a data scientist at BlueVine interested in data-science, machine learning, deep learning, Python scientific programming, data visualizations, and Bayesian modelling.</p>
         </div>
     </section>
-        </div>
-        <div class="col-sm-3" id="sidebar">
-            <aside>
+            </div>
+            <div class="col-sm-3" id="sidebar">
+                <aside>
 <!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
@@ -266,13 +279,13 @@ DeanLa            </a>
   <a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
   <ul class="list-group " id="tags">
     <li class="list-group-item tag-4">
-      <a href="/tag/matplotlib.html">matplotlib</a>
+      <a href="/tag/python.html">python</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="/tag/hacks.html">hacks</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="/tag/python.html">python</a>
+      <a href="/tag/matplotlib.html">matplotlib</a>
     </li>
   </ul>
 </li>
@@ -290,10 +303,10 @@ DeanLa            </a>
 <!-- End Sidebar/Links -->
   </ul>
 </section>
-<!-- End Sidebar -->            </aside>
+<!-- End Sidebar -->                </aside>
+            </div>
         </div>
     </div>
-</div>
 <footer>
    <div class="container">
       <hr>
@@ -306,13 +319,13 @@ DeanLa            </a>
       </div>
    </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/theme/js/bootstrap.min.js"></script>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="/theme/js/respond.min.js"></script>
 
     <script src="/static/js/custom.js"></script>
 
@@ -331,5 +344,6 @@ jQuery(document).ready(function($) {
 });
 });
 </script>
+</div>
 </body>
 </html>
