@@ -178,12 +178,16 @@ init_mathjax();
         <meta name="author" content="Dean Langsam" />
         <meta name="description" content="See all my apps" />
 
+        <meta property="fb:app_id" content="259760160731955"/>
     <meta property="og:site_name" content="DeanLa" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Apps"/>
     <meta property="og:url" content="/pages/apps.html"/>
     <meta property="og:description" content="See all my apps" />
 
+    <meta name="twitter:dnt" content="on">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="">
 
 
     <!-- Bootstrap -->
@@ -241,14 +245,22 @@ DeanLa            </a>
     </div>
 </div> <!-- /.navbar -->
 <!-- Banner -->
-<!-- End Banner -->
+<style>
+	#banner{
+	    background-image:url("/img/intro-bg-narrow.jpg");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1 style="text-transform: none;">DeanLa</h1 >
+		</div>
+	</div>
+</div><!-- End Banner -->
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <ol class="breadcrumb">
-        <li><a href="" title="DeanLa"><i class="fa fa-home fa-lg"></i></a></li>
-        <li class="active">Apps</li>
-    </ol>
     <section id="content" class="body">
         <h1 class="entry-title">Apps</h1>
         
@@ -258,6 +270,7 @@ DeanLa            </a>
 <p>See all my apps</p>
         </div>
     </section>
+
             </div>
             <div class="col-sm-3" id="sidebar">
                 <aside>
@@ -269,7 +282,7 @@ DeanLa            </a>
 <li class="list-group-item">
   <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
   <ul class="list-group" id="social">
-    <li class="list-group-item"><a href="https://www.facebook.com/DeanLangsam"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></li>
+    <li class="list-group-item"><a href="https://www.facebook.com/DeanLangsam"><i class="fa fa-facebook-square fa-lg"></i> </a></li>
     <li class="list-group-item"><a href="https://www.linkedin.com/in/deanla/"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
     <li class="list-group-item"><a href="https://github.com/DeanLa"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
   </ul>
@@ -284,25 +297,14 @@ DeanLa            </a>
       <a href="/tag/python.html">python</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="/tag/hacks.html">hacks</a>
+      <a href="/tag/matplotlib.html">matplotlib</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="/tag/matplotlib.html">matplotlib</a>
+      <a href="/tag/hacks.html">hacks</a>
     </li>
   </ul>
 </li>
 <!-- End Sidebar/Tag Cloud -->
-
-<!-- Sidebar/Links -->
-<li class="list-group-item">
-  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
-  <ul class="list-group" id="links">
-    <li class="list-group-item">
-      <a href="http://getpelican.com/" target="_blank">Pelican</a>
-    </li>
-  </ul>
-</li>
-<!-- End Sidebar/Links -->
   </ul>
 </section>
 <!-- End Sidebar -->                </aside>
@@ -331,6 +333,7 @@ DeanLa            </a>
 
     <script src="/static/js/custom.js"></script>
 
+    <script src="/theme/js/bodypadding.js"></script>
 
 <script type="text/javascript">
 jQuery(document).ready(function($) {
