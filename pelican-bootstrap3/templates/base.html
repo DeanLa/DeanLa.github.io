@@ -143,9 +143,9 @@
                 {% for p in pages | sort(attribute=PAGES_SORT_ATTRIBUTE) %}
                 {% if p.url %}
                 <li
-                {% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                {{ p.menulabel|default(p.title) }}
-            </a></li>
+                        {% if p== page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
+                    {{ p.menulabel|default(p.title) }}
+                </a></li>
                 {% endif %}
                 {% endfor %}
                 {% endif %}
@@ -193,6 +193,7 @@
                 {% endblock %}
                 {% block content %}
                 {% endblock %}
+
             </div>
             {% if not HIDE_SIDEBAR or ABOUT_ME or AVATAR %}
             <div class="col-sm-3{% if SIDEBAR_ON_LEFT %} col-sm-pull-9{% endif %}" id="sidebar">
@@ -235,5 +236,6 @@
     {% endif %}
 
     {% block scripts %}{% endblock %}
+</div>
 </body>
 </html>

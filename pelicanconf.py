@@ -26,13 +26,21 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),)
+# LINKS = (('Pelican', 'http://getpelican.com/'),)
+LINKS = ()
 
-# Social widget
-SOCIAL = (('Facebook', 'https://www.facebook.com/DeanLangsam'),
-          ('LinkedIn', 'https://www.linkedin.com/in/deanla/'),
-          ('Github', 'https://github.com/DeanLa'))
+# Social
+SOCIAL = (
+    ('', 'https://www.facebook.com/DeanLangsam','Facebook'),
+    ('LinkedIn', 'https://www.linkedin.com/in/deanla/'),
+    ('Github', 'https://github.com/DeanLa')
+)
 
+USE_OPEN_GRAPH = True
+OPEN_GRAPH_FB_APP_ID = 259760160731955
+TWITTER_CARDS = True
+
+#
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['pelican-plugins']
@@ -60,7 +68,7 @@ CUSTOM_CSS = 'static/css/custom.css'
 CUSTOM_JS = 'static/js/custom.js'
 PYGMENTS_STYLE = 'monokai'
 
-STATIC_PATHS = ['extra','apps']
+STATIC_PATHS = ['extra', 'apps','img']
 
 EXTRA_PATH_METADATA = {
     'extra/custom.css': {'path': 'static/css/custom.css'},
@@ -72,3 +80,13 @@ EXTRA_PATH_METADATA = {
 # Uncomment following line if you want document-relative URLs when developing
 # SITEURL = 'http://deanla.com'
 # RELATIVE_URLS = True
+
+SHOW_ARTICLE_AUTHOR = True
+LOAD_CONTENT_CACHE = False
+DISPLAY_BREADCRUMBS = False
+
+BANNER = 'img/intro-bg-narrow.jpg'
+BANNER_SUBTITLE = ''
+BANNER_ALL_PAGES = True
+
+DISPLAY_ARTICLE_INFO_ON_INDEX = True

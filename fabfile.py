@@ -60,6 +60,10 @@ def reserve():
     """`build`, then `serve`"""
     build()
     serve()
+def new():
+    '''clean, reserve'''
+    clean()
+    reserve()
 
 def preview():
     """Build production version of site"""

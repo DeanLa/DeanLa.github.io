@@ -1,4 +1,4 @@
 Title: Apps
-Template: apps
+<!-- Template: apps -->
 
 See all my apps
