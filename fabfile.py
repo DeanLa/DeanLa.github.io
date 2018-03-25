@@ -34,7 +34,7 @@ def clean():
 
 def build():
     """Build local version of site"""
-    local('pelican -s pelicanconf.py')
+    local('pelican -s pelicanconf.py --ignore-cache  ')
 
 def rebuild():
     """`build` with the delete switch"""
@@ -42,7 +42,7 @@ def rebuild():
 
 def regenerate():
     """Automatically regenerate site upon file modification"""
-    local('pelican -r -s pelicanconf.py')
+    local('pelican -r -s pelicanconf.py --ignore-cache')
 
 def serve():
     """Serve site at http://localhost:8000/"""

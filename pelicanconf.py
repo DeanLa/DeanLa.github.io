@@ -4,7 +4,10 @@
 
 AUTHOR = 'Dean Langsam'
 SITENAME = 'DeanLa'
-SITEURL = ''
+# SITEURL = ''
+SITEURL = 'http://deanla.com'
+RELATIVE_URLS = True
+
 
 PATH = 'content'
 PAGE_PATHS = ['pages']
@@ -78,15 +81,21 @@ EXTRA_PATH_METADATA = {
 
 }
 # Uncomment following line if you want document-relative URLs when developing
-# SITEURL = 'http://deanla.com'
-# RELATIVE_URLS = True
 
-SHOW_ARTICLE_AUTHOR = True
+
+
+SHOW_ARTICLE_AUTHOR = False
 LOAD_CONTENT_CACHE = False
 DISPLAY_BREADCRUMBS = False
 
+# Banner
 BANNER = 'img/intro-bg-narrow.jpg'
-BANNER_SUBTITLE = ''
+# BANNER_SUBTITLE = 'My Blog'
 BANNER_ALL_PAGES = True
 
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
+
+# GOOGLE_ANALYTICS
+# GOOGLE_ANALYTICS_UNIVERSAL
+# GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
+# DISQUS_SITENAME

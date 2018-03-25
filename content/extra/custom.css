@@ -6,3 +6,11 @@
     padding: 6px 13px;
 
 }
+
+img.on-list {
+    width: 100%;
+}
+
+.row.on-list {
+    margin-bottom: 20px;
+}

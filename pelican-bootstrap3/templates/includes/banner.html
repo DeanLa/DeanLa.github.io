@@ -1,16 +1,24 @@
 <style>
-	#banner{
-	    background-image:url("{{ SITEURL}}/{{ BANNER }}");
-	}
+    #banner {
+        background-image: url("{{ SITEURL}}/{{ BANNER }}");
+    }
 </style>
 
 <div id="banner">
-	<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-		<div class="copy">
-			<h1 style="text-transform: none;">{{ SITENAME }}</h1 >
-			{% if BANNER_SUBTITLE %}
-				<p class="intro">{{ BANNER_SUBTITLE }}</p>
-			{% endif %}
-		</div>
-	</div>
+    <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+        <div class="copy">
+            <h1 style="text-transform: none;">{{ SITENAME }}</h1>
+            {% if BANNER_SUBTITLE %}
+                {% if article is defined %}
+                    <p class="intro">{{ article.title }}</p>
+                {% elif page is defined %}
+                    <p class="intro">{{ page.title }}</p>
+
+                {% else %}
+                    <p class="intro">{{ BANNER_SUBTITLE }}</p>
+                {% endif %}
+
+            {% endif %}
+        </div>
+    </div>
 </div>
