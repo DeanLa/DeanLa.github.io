@@ -5,8 +5,8 @@ Category:
 Tags: dill, pickle, namedtuple, python
 Slug: dill-your-pickles
 Authors: Dean
-Status: published
+Status: draft
 Summary: Pickling is tricky
 og_image: img/dill-your-pickles.png
 
-{% notebook ../../notebooks/180323_dill_your_pickles/main.ipynb %}
+{% notebook 180317_spacious_matplotlib_ticks/main.ipynb %}

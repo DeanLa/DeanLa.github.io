@@ -6,7 +6,7 @@ Category: Hacks
 Tags: python, matplotlib, hacks
 Slug: spacious-matplotlib-tickss
 Author: Dean
-og_image: img/spacious-matplotlib-ticks.png
+og_image: img/img_posts/spacious-matplotlib-ticks.png
 <!-- Summary: Spacious Matplotlib Ticks -->
 
-{% notebook ../../notebooks/180317_spacious_matplotlib_ticks/main.ipynb %}
+{% notebook 180317_spacious_matplotlib_ticks/main.ipynb %}
