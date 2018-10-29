@@ -2,12 +2,17 @@
 ig*
 z_*
 *.log
-/notebooks/01 - Governement APIs or lack/csv/weeklies/*.xlsx
-/notebooks/01 - Governement APIs or lack/csv/weeklies/*.xls
-
+/tmp_notebooks/01 - Governement APIs or lack/csv/weeklies/*.xlsx
+/tmp_notebooks/01 - Governement APIs or lack/csv/weeklies/*.xls
+tmp_*
+old_*
+__pycache__/
 .ipynb_checkpoints
 .ipynb_checkpoints/*
-
+blog.sh
+pelican-bootstrap3/
+pelican-plugins/
+pelican-themes/
 
 ###### PYCHARM
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
