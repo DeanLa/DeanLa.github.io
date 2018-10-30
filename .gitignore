@@ -10,7 +10,7 @@ __pycache__/
 .ipynb_checkpoints
 .ipynb_checkpoints/*
 blog.sh
-pelican-bootstrap3/
+#pelican-bootstrap3/
 pelican-plugins/
 pelican-themes/
 

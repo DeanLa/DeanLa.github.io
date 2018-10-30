@@ -34,9 +34,9 @@ LINKS = ()
 
 # Social
 SOCIAL = (
-    ('', 'https://www.facebook.com/DeanLangsam','Facebook'),
-    ('LinkedIn', 'https://www.linkedin.com/in/deanla/'),
-    ('Github', 'https://github.com/DeanLa')
+    ('Github', 'https://github.com/DeanLa'),
+    ('Facebook', 'https://www.facebook.com/DeanLangsam','Facebook'),
+    ('LinkedIn', 'https://www.linkedin.com/in/deanla/')
 )
 
 USE_OPEN_GRAPH = True
@@ -80,9 +80,8 @@ EXTRA_PATH_METADATA = {
     'apps': {'path': 'apps'},
 
 }
-# Uncomment following line if you want document-relative URLs when developing
 
-
+EXTRA_HEADER = open('_nb_header.html').read()#.decode('utf-8')
 
 SHOW_ARTICLE_AUTHOR = False
 LOAD_CONTENT_CACHE = False
@@ -90,7 +89,7 @@ DISPLAY_BREADCRUMBS = False
 
 # Banner
 BANNER = 'img/intro-bg-narrow.jpg'
-# BANNER_SUBTITLE = 'My Blog'
+BANNER_SUBTITLE = 'My Blog'
 BANNER_ALL_PAGES = True
 
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
@@ -98,4 +97,5 @@ DISPLAY_ARTICLE_INFO_ON_INDEX = True
 # GOOGLE_ANALYTICS
 # GOOGLE_ANALYTICS_UNIVERSAL
 # GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
+DISQUS_SITENAME = 'deanla'
 # DISQUS_SITENAME
