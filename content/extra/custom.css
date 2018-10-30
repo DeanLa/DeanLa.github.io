@@ -247,6 +247,5 @@ table th[class*="col-"] {
 }
 
 .c1 {
-    color: green;
-!important;
+    color: #73ff4a !important;
 }
