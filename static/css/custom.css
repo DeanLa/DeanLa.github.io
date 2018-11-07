@@ -246,4 +246,6 @@ table th[class*="col-"] {
     min-height: 0.01%;
 }
 
-.highlight pre .c1 { color: #73ff4a }
+.highlight pre .c1 {
+    color: #73ff4a
+}
