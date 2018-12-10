@@ -54,6 +54,7 @@ def serve():
     server = AddressReuseTCPServer(('', PORT), ComplexHTTPRequestHandler)
 
     sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
+    sys.stderr.write('http://localhost:{0}/\n'.format(PORT))
     server.serve_forever()
 
 def reserve():
@@ -97,3 +98,8 @@ def gh_pages():
 
 def publish():
     gh_pages()
+
+def check_env():
+    """Publish to GitHub Pages"""
+    from pprint import pprint
+    pprint(env)

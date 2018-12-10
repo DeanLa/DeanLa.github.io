@@ -8,7 +8,6 @@ SITENAME = 'DeanLa'
 SITEURL = 'http://deanla.com'
 RELATIVE_URLS = True
 
-
 PATH = 'content'
 PAGE_PATHS = ['pages']
 ARTICLE_PATHS = ['posts']
@@ -35,7 +34,7 @@ LINKS = ()
 # Social
 SOCIAL = (
     ('Github', 'https://github.com/DeanLa'),
-    ('Facebook', 'https://www.facebook.com/DeanLangsam','Facebook'),
+    ('Facebook', 'https://www.facebook.com/DeanLangsam', 'Facebook'),
     ('LinkedIn', 'https://www.linkedin.com/in/deanla/')
 )
 
@@ -61,7 +60,8 @@ PLUGINS = [
     'liquid_tags.include_code',
     'render_math',
     'pelican-ipynb.markup',
-    'tipue_search']
+    'tipue_search',
+    'render_math']
 
 I18N_TEMPLATES_LANG = 'en'
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'authors', 'archives', 'search')
@@ -71,7 +71,7 @@ CUSTOM_CSS = 'static/css/custom.css'
 CUSTOM_JS = 'static/js/custom.js'
 PYGMENTS_STYLE = 'monokai'
 
-STATIC_PATHS = ['extra', 'apps','img']
+STATIC_PATHS = ['extra', 'apps', 'img']
 
 EXTRA_PATH_METADATA = {
     'extra/custom.css': {'path': 'static/css/custom.css'},
@@ -81,7 +81,7 @@ EXTRA_PATH_METADATA = {
 
 }
 
-EXTRA_HEADER = open('_nb_header.html').read()#.decode('utf-8')
+EXTRA_HEADER = open('_nb_header.html').read()  # .decode('utf-8')
 
 SHOW_ARTICLE_AUTHOR = False
 LOAD_CONTENT_CACHE = False
@@ -97,5 +97,6 @@ DISPLAY_ARTICLE_INFO_ON_INDEX = True
 # GOOGLE_ANALYTICS
 # GOOGLE_ANALYTICS_UNIVERSAL
 # GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
-DISQUS_SITENAME = 'deanla'
+DISQUS_SITENAME = "deanla"
+
 # DISQUS_SITENAME
