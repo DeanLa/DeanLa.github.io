@@ -249,3 +249,7 @@ table th[class*="col-"] {
 .highlight pre .c1 {
     color: #73ff4a
 }
+
+a {
+    color: steelblue;
+}
