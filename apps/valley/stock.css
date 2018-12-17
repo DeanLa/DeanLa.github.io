@@ -65,3 +65,12 @@ body {
 h1, h2, h3, h4, h5,h6 {
         font-family: 'Alef', sans-serif ;
 }
+
+.slide {
+    min-height: 300px;
+    margin: 20px;
+}
+
+.slide-text {
+    margin-bottom: 20px;
+}

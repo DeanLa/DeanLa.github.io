@@ -49,8 +49,8 @@ function itemRemove() {
 
 function addToCart() {
     var currentItem = $stock.html();
-    $cart.append('<li class="list-group-item">' +
-        currentItem +
+    $cart.append('<li class="list-group-item slide">' +
+        '<div class="slide-text">' + currentItem + '</div>' +
         '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
     // console.log(currentItem)
 }
