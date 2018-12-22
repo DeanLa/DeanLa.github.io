@@ -6,6 +6,16 @@
       prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml" {% endif %}>
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+
+    <!-- Adsense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8294048408880022",
+            enable_page_level_ads: true
+        });
+    </script>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -109,9 +119,9 @@
               rel="alternate"
               title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {% endif %}
-{#    {% if EXTRA_HEADER %}#}
-{#      {{ EXTRA_HEADER }}#}
-{#      {% endif %}#}
+    {#    {% if EXTRA_HEADER %}#}
+    {#      {{ EXTRA_HEADER }}#}
+    {#      {% endif %}#}
 </head>
 <body>
 

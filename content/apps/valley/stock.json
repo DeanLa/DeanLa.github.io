@@ -6,12 +6,16 @@
     "It is ",
     "We are ",
     "The product is ",
-    "Our product is "
+    "Our product is ",
+    "The company is ",
+    "The idea is ",
+    "The concept is "
   ],
   "analogy": [
     "like ",
     "basically ",
-    "essentially "
+    "essentially ",
+    "an innovative approach to "
   ],
   "company": [
     "Google ",
@@ -19,6 +23,7 @@
     "Twitter ",
     "Instagram ",
     "Amazon ",
+    "Ali Express ",
     "iPad ",
     "an app store ",
     "Uber ",
@@ -49,7 +54,8 @@
     "only for ",
     "but with ",
     "but aimed at ",
-    "only focused on "
+    "only focused on ",
+    "aiming to disrupt "
   ],
   "vertical": [
     "web search.",
@@ -75,7 +81,9 @@
     "project management.",
     "live streaming.",
     "blockchain.",
-    "open-source"
+    "open-source.",
+    "podcasting",
+    "cryptocurrency."
   ],
   "LB": [
     "</h1><h2>"
@@ -112,10 +120,12 @@
     "an Apache license ",
     "continuous integration ",
     "SEO ",
-    "toolbars",
+    "toolbars ",
     "chatbots ",
     "bitcoin ",
-    "ride sharing "
+    "ride sharing ",
+    "blockchain ",
+    "virtue signaling "
   ],
   "aaS": [
     "as a service ",
@@ -167,7 +177,7 @@
     "impact investments.",
     "a paleo that wouldn't shut up about it.",
     "ionized water.",
-    "the voice of Ira Glass",
+    "the voice of Ira Glass.",
     ""
 
   ],

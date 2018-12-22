@@ -2,7 +2,7 @@ Title: Diving into Pandas is Faster than Reinventing it
 Date: 2018-10-29 21:00
 Modified: 2018-10-29 21:00
 Status: published
-Category: Talks
+Category: Tutorial
 Tags: pandas, resample, clip, pipe, python
 Slug: dont_reinvent_pandas
 Author: Dean

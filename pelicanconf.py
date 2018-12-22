@@ -65,7 +65,7 @@ PLUGINS = [
 
 I18N_TEMPLATES_LANG = 'en'
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'authors', 'archives', 'search')
-
+SITEMAP_SAVE_AS = 'sitemap.xml'
 # Custom CSS and JS
 CUSTOM_CSS = 'static/css/custom.css'
 CUSTOM_JS = 'static/js/custom.js'
@@ -98,5 +98,3 @@ DISPLAY_ARTICLE_INFO_ON_INDEX = True
 # GOOGLE_ANALYTICS_UNIVERSAL
 # GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
 DISQUS_SITENAME = "deanla"
-
-# DISQUS_SITENAME

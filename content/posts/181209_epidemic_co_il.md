@@ -11,6 +11,7 @@ og_image: img/img_posts/epidemic.png
 My new website [Epidemic](http://www.epidemic.co.il) (Hebrew) is up and running.  
 Epidemic is an open data public health project focused on making disease data accessible to the public.
 The website uses mainly Bokeh with some basic css and javascript, and has many options such as:  
+
 * Viewing disease progression chart for dozens of disease
 * Viewing disease progression by regions in the country
 * Downloading data as machine-readable CSVs
