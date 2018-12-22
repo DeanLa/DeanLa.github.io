@@ -1,14 +1,14 @@
 /**
  * Created by Dean on 14-Jan-17.
  */
- /*
+/*
 <Name>
 <we are/it is/the product is/our service is>
 <like/essentially/basically>
 <Famous company>
 for
 <vertical>.
- */
+*/
 var items = [];
 var chance = Chance();
 var $cart = $("#my-cart");
@@ -22,26 +22,29 @@ $.getJSON("stock.json", function (data) {
         quantity = quantity * (val.length);
         items.push(val);
     });
-    moreStock();
+    param = new URLSearchParams(window.location.search);
+    moreStock(param);
     console.log(quantity);
     $("#quantity").html(quantity);
 });
 
-function moreStock() {
-    var txt = "";
-    // var whichVars = [];
-    $.each(items, function (i, item) {
-        // idx = Math.floor(Math.random() * item.length);
-        idx = chance.integer({min:0, max:item.length - 1});
-        txt += item[idx];
-        // txt += " ";
-        // whichVars.push(idx);
-    });
-    // console.log(whichVars)
-    // txt = txt.slice(0, -1);
+function moreStock(param='new') {
+    console.log(param)
+    var txt = '';
+    var args = "?product=";
+    if (param == 'new') {
+        // var whichVars = [];
+        $.each(items, function (i, item) {
+            idx = chance.integer({min: 0, max: item.length - 1});
+            txt += item[idx];
+            args += idx + "_"
+        });
+    }
     $stock.html(txt);
-    // return whichVars;
+    history.pushState({},
+        'Random Pitch ' + txt, args.slice(0, args.length - 1))
 }
+
 function itemRemove() {
     $(this).parent().remove()
 }
@@ -67,8 +70,8 @@ $("#fb-share").on("click", function () {
         display: 'popup',
         href: 'http://deanla.com/stock/',
         quote: "קניתי " + currentItem +
-        " בחנות הראנדום סטוק!!! " +
-        "",
+            " בחנות הראנדום סטוק!!! " +
+            "",
         hashtag: "$RANDOM_STOCK"
     }, function (response) {
     });
@@ -103,31 +106,3 @@ $("body").keypress(function (event) {
 if ($.browser.mobile) {
     $(".web-only").hide()
 }
-// var csvContent = "data:text/csv;charset=utf-8,";
-// var draws = [];
-
-
-////////DATA DOWNLOAD
-// $("#fb-share").on("click", function () {
-//     for (var i = 0; i < 100000; i++) {
-//         res = moreStock();
-//         draws.push(res);
-//         // console.log(i);
-//     }
-//     // console.log(draws)
-//     draws.forEach(function (nums, index) {
-//         dataString = nums.join(",");
-//         csvContent += index < draws.length ? dataString + "\n" : dataString;
-//     })
-//     var encodedUri = encodeURI(csvContent);
-//     // window.open(encodedUri);
-//     // $(this).setAttribute("href")
-//     var link = document.createElement("a");
-//     link.setAttribute("href", encodedUri);
-//     link.setAttribute("download", "my_data.csv");
-//     document.body.appendChild(link); // Required for FF
-//
-//     link.click(); //
-// });
-
-
