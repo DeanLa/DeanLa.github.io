@@ -14,4 +14,8 @@ Diving Into Pandas is Faster than Reinventing it. A talk I gave at the PyData me
 
 {% youtube vDuvD4y0WFc %}
 
-[The original talk](/dont_reinvent_pandas)
+Some More:  
+
+*  [The original blog post](/dont_reinvent_pandas)
+*  [Tzipi and Sagi's talk: Using Jupyterhub to 10,000x data access](https://www.youtube.com/watch?v=QN8T9zdnyLc)
+*  [Iris' talk: Prevent Incarceration Thru Prioritizing Mental Health Outreach](https://www.youtube.com/watch?v=1ZtQL8hsMkg)
