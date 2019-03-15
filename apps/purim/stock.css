@@ -80,3 +80,14 @@ p, h2 {
 h1, h2, h3, h4, h5,h6 {
         font-family: 'Alef', sans-serif ;
 }
+
+#change-stock {
+    background-color: #EE53A0;
+    border-color: #EE53A0;
+}
+
+#add-to-cart {
+    background-color: #fbeb33;
+    border-color: #fbeb33;
+    color:black;
+}
