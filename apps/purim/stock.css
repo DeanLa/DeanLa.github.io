@@ -18,6 +18,7 @@ body {
     opacity: 0.1;
 }
 
+
 #cart-well {
     background-color: #dbdbdb;
 }
@@ -29,7 +30,7 @@ body {
     margin-bottom: 0;
     min-height: 80%;
     opacity: 0.91;
-    border: red 2px solid;
+    border: blue 2px solid;
 }
 
 #stock {
@@ -47,11 +48,26 @@ p, h2 {
 
 #head-logo {
     font-family: 'Alef', sans-serif ;
-    background-color: red;
-    color: yellow;
+    /*background-color: blue;*/
+    background-image: url("pattern.jpg");
+    background-repeat: repeat;
+    background-size: 100px;
+
     width: 100%;
     margin: 0;
 }
+
+#main-head {
+    margin: 0;
+    font-size: 84px;
+    color: #EE53A0;
+    font-weight: bold;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-decoration-style: double;
+    text-shadow: 3px 3px #000;
+}
+
 .btn {
     /*margin-left: 10px;*/
     /*margin-right: 10px;*/
