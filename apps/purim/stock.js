@@ -14,6 +14,7 @@ $.getJSON("stock.json", function (data) {
         quantity = quantity * (val.length - 1);
         items.push(val);
     });
+    quantity = quantity / 2;
     moreStock();
     console.log(quantity);
     $("#quantity").html(quantity);
@@ -42,7 +43,7 @@ function moreStock() {
 
 function loader() {
     var base = "מביא מהמדף";
-    base = base + '<img id="loader" src="loader.gif" height="30">';
+    base = base + '<img id="loader" src="loader.gif" height="30" alt="loader">';
     $stock.html(base);
 }
 
