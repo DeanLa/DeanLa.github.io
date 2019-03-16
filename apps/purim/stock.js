@@ -34,14 +34,24 @@ function moreStock() {
     // console.log(whichVars)
 
     txt = txt.slice(0, -1);
-    setTimeout(function () {
-        $stock.html(txt);
-    }, 1000)
+    if (txt.length > 50) {
+        moreStock()
+    } else {
+        setTimeout(function () {
+            $stock.html(txt);
+        }, 1000)
+    }
     // return whichVars;
 }
 
+function random_text() {
+    arr = ["מביא מהמדף", "מביא מהמחסן",
+        "הולך למחסן", "שניה, מחפש לך", "בודק בארגז", "מחפש בארגז", "הגיע היום מהמכולה", "מה יש לנו פה..."];
+    idx = chance.integer({min: 0, max: arr.length - 1});
+    return arr[idx]
+}
 function loader() {
-    var base = "מביא מהמדף";
+    var base = random_text();
     var loadgif = '<img id="loader" src="loader.gif" height="30" alt="loader">';
     base = loadgif + base + loadgif;
     $stock.html(base);
