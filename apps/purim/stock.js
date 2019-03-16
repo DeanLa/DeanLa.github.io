@@ -5,13 +5,16 @@ var items = [];
 var chance = Chance();
 var $cart = $("#my-cart");
 var $stock = $("#stock");
-$.getJSON("stock.json", function (data) {
+$.getJSON("stock_gender.json", function (data) {
     quantity = 1;
     // console.log(quantity);
     $.each(data, function (key, val) {
         console.log(val.length);
-        // console.log(quantity);
-        quantity = quantity * parseInt(val.length * 0.75);
+        if (["first", "third"].includes(key)) {
+            quantity = quantity * parseInt(val["b"].length * 0.75);
+        } else {
+            quantity = quantity * parseInt(val.length * 0.75);
+        }
         items.push(val);
     });
     moreStock();
@@ -19,14 +22,25 @@ $.getJSON("stock.json", function (data) {
     $("#quantity").html(quantity);
 });
 
+function getGender() {
+    var arr = ['b', 'g'];
+    var idx = chance.integer({min: 0, max: arr.length - 1});
+    return arr[idx]
+}
 function moreStock() {
+    console.log("NEW STOCK");
     loader();
     var txt = "";
-    // var whichVars = [];
+    var gender = getGender();
+    console.log(gender);
     $.each(items, function (i, item) {
-        // idx = Math.floor(Math.random() * item.length);
-        idx = chance.integer({min: 0, max: item.length - 1});
-        txt += item[idx];
+        if ([1, 3].includes(i)) {
+            arr = item[gender];
+        } else {
+            arr = item;
+        }
+        idx = chance.integer({min: 0, max: arr.length - 1});
+        txt += arr[idx];
         txt += " ";
         // whichVars.push(idx);
     });
@@ -44,7 +58,7 @@ function moreStock() {
 }
 
 function random_text() {
-    arr = ["מביא מהמדף", "מביא מהמחסן",
+    var arr = ["מביא מהמדף", "מביא מהמחסן",
         "הולך למחסן", "שניה, מחפש לך", "בודק בארגז", "מחפש בארגז", "הגיע היום מהמכולה", "מה יש לנו פה...",
         "שניה מביא עוד אחת", "בודק אם יש לי במאחורה", "יש פה איזה משהו", "היום הגיע לי", "זה הגיע היום", "מה דעתך על...",
         "הנה בובה של תחפושת", "כל הילדים רוצים את זה", "מה הולך היום?", "הנה משהו יותר חזק מספינר", "השנה כולם מתחפשים לזה",
