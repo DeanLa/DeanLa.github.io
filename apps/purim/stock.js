@@ -11,10 +11,9 @@ $.getJSON("stock.json", function (data) {
     $.each(data, function (key, val) {
         console.log(val.length);
         // console.log(quantity);
-        quantity = quantity * (val.length - 1);
+        quantity = quantity * parseInt(val.length * 0.75);
         items.push(val);
     });
-    quantity = quantity / 2;
     moreStock();
     console.log(quantity);
     $("#quantity").html(quantity);
