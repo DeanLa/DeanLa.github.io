@@ -18,6 +18,7 @@ body {
     opacity: 0.1;
 }
 
+
 #cart-well {
     background-color: #dbdbdb;
 }
@@ -29,7 +30,7 @@ body {
     margin-bottom: 0;
     min-height: 80%;
     opacity: 0.91;
-    border: red 2px solid;
+    border: #EE53A0 4px solid;
 }
 
 #stock {
@@ -47,11 +48,26 @@ p, h2 {
 
 #head-logo {
     font-family: 'Alef', sans-serif ;
-    background-color: red;
-    color: yellow;
+    /*background-color: blue;*/
+    background-image: url("pattern2.jpg");
+    background-repeat: repeat;
+    background-size: 100px;
+
     width: 100%;
     margin: 0;
 }
+
+.main-head {
+    margin: 0;
+    font-size: 84px;
+    color: hotpink;
+    font-weight: bold;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.1px;
+    /*-webkit-text-decoration-style: double;*/
+    text-shadow: 3px 3px #000;
+}
+
 .btn {
     /*margin-left: 10px;*/
     /*margin-right: 10px;*/
@@ -63,4 +79,15 @@ p, h2 {
 
 h1, h2, h3, h4, h5,h6 {
         font-family: 'Alef', sans-serif ;
+}
+
+#change-stock {
+    background-color: hotpink;
+    border-color: hotpink;
+}
+
+#add-to-cart {
+    background-color: gold;
+    border-color: gold;
+    color:black;
 }

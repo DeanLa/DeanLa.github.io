@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <title>My Random Stock</title>
+    <title>הפורימטור</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <meta name="description" content="">
     <meta name="author" content="Dean Langsam">
@@ -30,7 +30,8 @@
     <link href="../css/dean.css" rel="stylesheet">
     <link rel="stylesheet" href="stock.css">
     <!-- Custom Fonts -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!--<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"-->
     <!--type="text/css">-->
     <link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet" type="text/css">
@@ -51,8 +52,11 @@
 <!--<div class="background-img"></div>-->
 <div class="row text-center" id="head-logo" style="">
     <div class="col-sm-12">
-        <h1 style="margin-bottom: 0">פורימטור</h1>
-        <span style="font-size: 5em; margin-top: 0"><i class="fza fza-shopping-cart"></i></span>
+        <h1 class="main-head">
+            <span class="web-only"><span class="main-head"><i class="fas fa-mask"></i></span></span>
+            פורימטור
+            <span class="web-only"><span class="main-head"><i class="fas fa-mask"></i></span></span>
+        </h1>
     </div>
 </div>
 <div id="bg"></div>
@@ -67,7 +71,7 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-push-6">
                     <button class="btn btn-success" id="change-stock">עוד תחפושת
-                        <i class="fa fa-repeat" aria-hidden="true"></i></button>
+                        <i class="fas fa-mask"></i></button>
                 </div>
                 <div class="col-sm-6 col-sm-pull-6">
                     <button class="btn btn-danger" id="add-to-cart"> לעגלה
@@ -84,18 +88,15 @@
             <br/> אם המוצר לטעמך הכפתור "לעגלה" <span class="web-only">(או הכפתור L במקלדת)</span> יוסיף אותו לעגלת
             הקניות.
         </p>
+
+        <div class="fb-share-button" data-href="http://deanla.com/apps/purim/" data-layout="button_count"
+             data-size="large"><a target="_blank"
+                                  href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdeanla.com%2Fapps%2Fpurim%2F&amp;src=sdkpreparse"
+                                  class="fb-xfbml-parse-ignore">Share</a></div>
         <h2>מעל
-            <span id="quantity">
-1
-        </span>
+            <span id="quantity">1</span>
             תחפושות שונות!
         </h2>
-        <div class="row follow">
-            <iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2FDeanLangsam&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80"
-                    scrolling="no" frameborder="0"
-                    style="border:none; overflow:hidden;  height:80px; width: 100%;"
-                    allowTransparency="true"></iframe>
-        </div>
     </div>
     <div class="col-sm-3 col-sm-push-3">
         <div class="well text-right" id="cart-well">
@@ -105,8 +106,6 @@
         </div>
     </div>
     <div class="col-sm-3 col-sm-pull-9">
-        <!--ads-->
-        <!--<div class="well">asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd </div>-->
     </div>
 
 </div>

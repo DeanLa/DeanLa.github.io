@@ -14,26 +14,40 @@ $.getJSON("stock.json", function (data) {
         quantity = quantity * (val.length - 1);
         items.push(val);
     });
+    quantity = quantity / 2;
     moreStock();
-    console.log(quantity)
+    console.log(quantity);
     $("#quantity").html(quantity);
 });
 
 function moreStock() {
+    loader();
     var txt = "";
     // var whichVars = [];
     $.each(items, function (i, item) {
         // idx = Math.floor(Math.random() * item.length);
-        idx = chance.integer({min:0, max:item.length - 1});
+        idx = chance.integer({min: 0, max: item.length - 1});
         txt += item[idx];
         txt += " ";
         // whichVars.push(idx);
     });
     // console.log(whichVars)
+
     txt = txt.slice(0, -1);
-    $stock.html(txt);
+    setTimeout(function () {
+        $stock.html(txt);
+
+    }, 1000)
     // return whichVars;
 }
+
+function loader() {
+    var base = "מביא מהמדף";
+    var loadgif = '<img id="loader" src="loader.gif" height="30" alt="loader">';
+    base = loadgif + base + loadgif;
+    $stock.html(base);
+}
+
 function itemRemove() {
     $(this).parent().remove()
 }
@@ -59,8 +73,8 @@ $("#fb-share").on("click", function () {
         display: 'popup',
         href: 'http://deanla.com/stock/',
         quote: "קניתי " + currentItem +
-        " בחנות הראנדום סטוק!!! " +
-        "",
+            " בחנות הראנדום סטוק!!! " +
+            "",
         hashtag: "$RANDOM_STOCK"
     }, function (response) {
     });
