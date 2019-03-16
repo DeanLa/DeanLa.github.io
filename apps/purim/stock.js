@@ -36,14 +36,14 @@ function moreStock() {
     txt = txt.slice(0, -1);
     setTimeout(function () {
         $stock.html(txt);
-
     }, 1000)
     // return whichVars;
 }
 
 function loader() {
     var base = "מביא מהמדף";
-    base = base + '<img id="loader" src="loader.gif" height="30" alt="loader">';
+    var loadgif = '<img id="loader" src="loader.gif" height="30" alt="loader">';
+    base = loadgif + base + loadgif;
     $stock.html(base);
 }
 
