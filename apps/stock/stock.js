@@ -41,8 +41,17 @@ function moreStock() {
     // return whichVars;
 }
 
+function random_text() {
+    var arr = ["מביא מהמדף", "מביא מהמחסן",
+        "הולך למחסן", "שניה, מחפש לך", "בודק בארגז", "מחפש בארגז", "הגיע היום מהמכולה", "מה יש לנו פה...",
+        "שניה מביא עוד אחד", "בודק אם יש לי במאחורה", "יש פה איזה משהו", "היום הגיע לי", "זה הגיע היום", "מה דעתך על...",
+        "הנה בובה של מוצר", "כל הילדים רוצים את זה", "מה הולך היום?", "הנה משהו יותר חזק מספינר", "אין מסיבת פורים בלי"
+    ];
+    idx = chance.integer({min: 0, max: arr.length - 1});
+    return arr[idx]
+}
 function loader() {
-    var base = "מביא מהמדף";
+    var base = random_text();
     var loadgif = '<img id="loader" src="loader.gif" height="30" alt="loader">';
     base = loadgif + base + loadgif;
     $stock.html(base);
