@@ -47,7 +47,7 @@ function moreStock() {
     // console.log(whichVars)
 
     txt = txt.slice(0, -1);
-    if (txt.length > 60) {
+    if (txt.length > 50) {
         moreStock()
     } else {
         setTimeout(function () {
