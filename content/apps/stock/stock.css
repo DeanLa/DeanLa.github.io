@@ -64,3 +64,13 @@ p, h2 {
 h1, h2, h3, h4, h5,h6 {
         font-family: 'Alef', sans-serif ;
 }
+
+#change-stock {
+    font-size: 2em;
+
+}
+
+#add-to-cart {
+    font-size: 1.5em;
+
+}

@@ -81,13 +81,19 @@ h1, h2, h3, h4, h5,h6 {
         font-family: 'Alef', sans-serif ;
 }
 
+.btn {
+}
 #change-stock {
     background-color: hotpink;
     border-color: hotpink;
+    font-size: 2em;
+
 }
 
 #add-to-cart {
     background-color: gold;
     border-color: gold;
     color:black;
+        font-size: 1.5em;
+
 }
