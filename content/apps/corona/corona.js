@@ -115,7 +115,7 @@ $("#fb-share").on("click", function () {
         method: 'share',
         display: 'popup',
         href: 'http://deanla.com/corona/',
-        quote: "חקירות אפידמיולוגיות",
+        quote: currentItem,
         hashtag: "$FAKE_IMOH"
     }, function (response) {
     });
