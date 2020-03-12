@@ -42,6 +42,7 @@ function moreStock() {
     txt = txt.slice(0, -1);
     setTimeout(function () {
         $stock.html(txt);
+        $("#sicknum").html(chance.integer({min: 1000, max: 3000}))
 
     }, 1000)
     // return whichVars;
