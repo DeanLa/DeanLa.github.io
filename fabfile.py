@@ -97,6 +97,7 @@ def gh_pages():
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
 
 def publish():
+    local('gcam "corona";ggpush')
     gh_pages()
 
 def check_env():
