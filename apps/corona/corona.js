@@ -18,6 +18,7 @@ $.getJSON("corona.json", function (data) {
     console.log(quantity);
     $("#quantity").html(quantity);
 });
+
 function randomLocation() {
     var txt = "";
     // var whichVars = [];
@@ -40,13 +41,34 @@ function randomLocation() {
     txt = txt.slice(0, -1);
     return txt
 }
+
+function getDaysAgo(b) {
+    var a = new Date();
+    a.setDate(a.getDate() - b);
+    return a
+};
+
+function niceDate(dt, n) {
+    console.log(dt);
+    newdt = dt.setDate(dt.getDate() - n);
+    newdt = new Date(newdt);
+    console.log(newdt);
+    var day = newdt.getDate();
+    console.log(day);
+    var month = newdt.getMonth() + 1;
+    var ret = day.toString() + '.' + month.toString();
+    console.log(ret);
+    return ret
+}
+
 function moreStock() {
     loader();
+    var date = new Date();
     txt = '<ul>';
-    txt = '<li>' + randomLocation() + '</li>';
-    txt += '<li>' + randomLocation() + '</li>';
-    txt += '<li>' + randomLocation() + '</li>';
-    txt += '</li>';
+    txt += '<li>' + niceDate(date, 7) + " " + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, 1) + " " + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, 1) + " " + randomLocation() + '</li>';
+    txt += '</ul>';
     setTimeout(function () {
         $stock.html(txt);
         $("#sicknum").html(chance.integer({min: 1000, max: 3000}));
@@ -56,7 +78,7 @@ function moreStock() {
 }
 
 function random_text() {
-    var arr = ["חוקרים...","מבצעים תחקיר","הוא בדיוק חזר מאיטליה","היא בדיוק חזרה מאוסטריה"
+    var arr = ["חוקרים...", "מבצעים תחקיר", "הוא בדיוק חזר מאיטליה", "היא בדיוק חזרה מאוסטריה"
     ];
     idx = chance.integer({min: 0, max: arr.length - 1});
     return arr[idx]
