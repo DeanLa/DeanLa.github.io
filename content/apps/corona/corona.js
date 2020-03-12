@@ -115,9 +115,7 @@ $("#fb-share").on("click", function () {
         method: 'share',
         display: 'popup',
         href: 'http://deanla.com/corona/',
-        quote: "קניתי " + currentItem +
-            " בחנות הראנדום סטוק!!! " +
-            "",
+        quote: "חקירות אפידמיולוגיות",
         hashtag: "$FAKE_IMOH"
     }, function (response) {
     });
