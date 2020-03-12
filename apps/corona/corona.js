@@ -3,7 +3,6 @@
  */
 var items = [];
 var chance = Chance();
-var $cart = $("#my-cart");
 var $stock = $("#stock");
 $.getJSON("corona.json", function (data) {
     quantity = 1;
@@ -116,10 +115,8 @@ $("#fb-share").on("click", function () {
         method: 'share',
         display: 'popup',
         href: 'http://deanla.com/corona/',
-        quote: "קניתי " + currentItem +
-            " בחנות הראנדום סטוק!!! " +
-            "",
-        hashtag: "$RANDOM_STOCK"
+        quote: "חקירות אפידמיולוגיות",
+        hashtag: "$FAKE_IMOH"
     }, function (response) {
     });
 });
