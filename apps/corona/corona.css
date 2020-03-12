@@ -2,7 +2,7 @@ body {
     /*height: 100%;*/
     width: 100%;
     /*position: relative;*/
-    font-family: 'Alef', sans-serif ;
+    font-family: 'Alef', sans-serif;
 }
 
 #bg {
@@ -47,24 +47,26 @@ p, h2, h3, h4 {
 }
 
 #head-logo {
-    font-family: 'Alef', sans-serif ;
-    background-image: url('bgtop.jpg') ;
+    font-family: 'Alef', sans-serif;
+    background-image: url('bgtop.png');
     background-size: cover;
-    color: yellow;
+    color: #fffefd;
     width: 100%;
     margin: 0;
+    min-height: 100px;
 }
+
 .btn {
     /*margin-left: 10px;*/
     /*margin-right: 10px;*/
     width: 90%;
     margin: 10px;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
-h1, h2, h3, h4, h5,h6 {
-        font-family: 'Alef', sans-serif ;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alef', sans-serif;
 }
 
 #change-stock {
@@ -75,4 +77,8 @@ h1, h2, h3, h4, h5,h6 {
 #add-to-cart {
     font-size: 1.5em;
 
+}
+
+li {
+    margin-bottom: 10px;
 }
