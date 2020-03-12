@@ -18,9 +18,7 @@ $.getJSON("corona.json", function (data) {
     console.log(quantity);
     $("#quantity").html(quantity);
 });
-
-function moreStock() {
-    loader();
+function randomLocation() {
     var txt = "";
     // var whichVars = [];
     $.each(items, function (i, item) {
@@ -40,6 +38,15 @@ function moreStock() {
     // console.log(whichVars)
 
     txt = txt.slice(0, -1);
+    return txt
+}
+function moreStock() {
+    loader();
+    txt = '<ul>';
+    txt = '<li>' + randomLocation() + '</li>';
+    txt += '<li>' + randomLocation() + '</li>';
+    txt += '<li>' + randomLocation() + '</li>';
+    txt += '</li>';
     setTimeout(function () {
         $stock.html(txt);
         $("#sicknum").html(chance.integer({min: 1000, max: 3000}));
