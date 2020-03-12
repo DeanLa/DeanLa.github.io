@@ -27,7 +27,14 @@ function moreStock() {
         // idx = Math.floor(Math.random() * item.length);
         idx = chance.integer({min: 0, max: item.length - 1});
         txt += item[idx];
-        txt += " ";
+        if (i == 0) {
+            txt += " \""
+        } else if (i == 2) {
+            txt += "\" "
+        } else {
+            txt += " ";
+
+        }
         // whichVars.push(idx);
     });
     // console.log(whichVars)
@@ -49,6 +56,7 @@ function random_text() {
     idx = chance.integer({min: 0, max: arr.length - 1});
     return arr[idx]
 }
+
 function loader() {
     var base = random_text();
     var loadgif = '<img id="loader" src="loader.gif" height="30" alt="loader">';
