@@ -5,7 +5,7 @@ var items = [];
 var chance = Chance();
 var $cart = $("#my-cart");
 var $stock = $("#stock");
-$.getJSON("stock.json", function (data) {
+$.getJSON("corona.json", function (data) {
     quantity = 1;
     // console.log(quantity);
     $.each(data, function (key, val) {
@@ -42,17 +42,14 @@ function moreStock() {
     txt = txt.slice(0, -1);
     setTimeout(function () {
         $stock.html(txt);
-        $("#sicknum").html(chance.integer({min: 1000, max: 3000}))
+        $("#sicknum").html(chance.integer({min: 1000, max: 3000}));
 
     }, 1000)
     // return whichVars;
 }
 
 function random_text() {
-    var arr = ["מביא מהמדף", "מביא מהמחסן",
-        "הולך למחסן", "שניה, מחפש לך", "בודק בארגז", "מחפש בארגז", "הגיע היום מהמכולה", "מה יש לנו פה...",
-        "שניה מביא עוד אחד", "בודק אם יש לי במאחורה", "יש פה איזה משהו", "היום הגיע לי", "זה הגיע היום", "מה דעתך על...",
-        "הנה בובה של מוצר", "כל הילדים רוצים את זה", "מה הולך היום?", "הנה משהו יותר חזק מספינר", "אין מסיבה בלי"
+    var arr = ["חוקרים...","מבצעים תחקיר","הוא בדיוק חזר מאיטליה","היא בדיוק חזרה מאוסטריה"
     ];
     idx = chance.integer({min: 0, max: arr.length - 1});
     return arr[idx]
@@ -88,7 +85,7 @@ $("#fb-share").on("click", function () {
 
         method: 'share',
         display: 'popup',
-        href: 'http://deanla.com/stock/',
+        href: 'http://deanla.com/corona/',
         quote: "קניתי " + currentItem +
             " בחנות הראנדום סטוק!!! " +
             "",
