@@ -3,7 +3,6 @@
  */
 var items = [];
 var chance = Chance();
-var $cart = $("#my-cart");
 var $stock = $("#stock");
 $.getJSON("corona.json", function (data) {
     quantity = 1;
@@ -119,7 +118,7 @@ $("#fb-share").on("click", function () {
         quote: "קניתי " + currentItem +
             " בחנות הראנדום סטוק!!! " +
             "",
-        hashtag: "$RANDOM_STOCK"
+        hashtag: "$FAKE_IMOH"
     }, function (response) {
     });
 });
