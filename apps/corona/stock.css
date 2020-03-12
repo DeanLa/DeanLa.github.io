@@ -47,7 +47,8 @@ p, h2 {
 
 #head-logo {
     font-family: 'Alef', sans-serif ;
-    background-color: red;
+    background-image: url('bgtop.jpg') ;
+    background-size: cover;
     color: yellow;
     width: 100%;
     margin: 0;
