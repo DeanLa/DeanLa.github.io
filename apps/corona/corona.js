@@ -65,9 +65,9 @@ function moreStock() {
     loader();
     var date = new Date();
     txt = '<ul>';
-    txt += '<li>' + niceDate(date, 7) + " " + randomLocation() + '</li>';
-    txt += '<li>' + niceDate(date, 1) + " " + randomLocation() + '</li>';
-    txt += '<li>' + niceDate(date, 1) + " " + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, 7) + "&emsp;" + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, -1) + "&emsp;" + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, -1) + "&emsp;" + randomLocation() + '</li>';
     txt += '</ul>';
     setTimeout(function () {
         $stock.html(txt);
