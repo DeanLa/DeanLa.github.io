@@ -65,9 +65,9 @@ function moreStock() {
     loader();
     var date = new Date();
     txt = '<ul>';
-    txt += '<li>' + niceDate(date, 7) + "&emsp;" + randomLocation() + '</li>';
-    txt += '<li>' + niceDate(date, -1) + "&emsp;" + randomLocation() + '</li>';
-    txt += '<li>' + niceDate(date, -1) + "&emsp;" + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, chance.integer({min: 6, max: 9})) + "&emsp;" + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, chance.integer({min: -3, max: -1})) + "&emsp;" + randomLocation() + '</li>';
+    txt += '<li>' + niceDate(date, chance.integer({min: -3, max: -1})) + "&emsp;" + randomLocation() + '</li>';
     txt += '</ul>';
     setTimeout(function () {
         $stock.html(txt);
@@ -79,7 +79,7 @@ function moreStock() {
 
 function random_text() {
     var arr = ["חוקרים...", "מבצעים תחקיר", "הוא בדיוק חזר מאיטליה", "היא בדיוק חזרה מאוסטריה",
-        "מתשאלים את החולה","הפקחים שלנו חוזרים עם מסקנות","בקרוב נעדכן"
+        "מתשאלים את החולה", "הפקחים שלנו חוזרים עם מסקנות", "בקרוב נעדכן"
     ];
     idx = chance.integer({min: 0, max: arr.length - 1});
     return arr[idx]
