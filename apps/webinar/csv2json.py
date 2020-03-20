@@ -8,6 +8,6 @@ print(d.keys())
 d = {k: v.dropna().tolist() for k, v in d.items()}
 # d['type']
 # d['establishment_prefix']
-with open('webinar.json','w') as f:
+with open('webinar.json','w', encoding='latin-1') as f:
     json.dump(d, f)
 print
