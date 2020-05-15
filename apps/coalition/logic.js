@@ -8,7 +8,7 @@ $.getJSON("data.json", function (data) {
     quantity = 1;
     // console.log(quantity);
     $.each(data, function (key, val) {
-        quantity = quantity * (val.length - 3);
+        quantity = quantity * (val.length);
         items.push(val);
     });
     moreStock();
@@ -77,17 +77,17 @@ function addToCart() {
 
 
 $("#change-stock").click(moreStock);
-$cart.on("click", "li .cart-remove", itemRemove);
-$("#add-to-cart").click(addToCart);
+// $cart.on("click", "li .cart-remove", itemRemove);
+// $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
     var currentItem = $stock.html();
     FB.ui({
 
         method: 'share',
         display: 'popup',
-        href: 'http://deanla.com/webinar/',
+        href: 'http://deanla.com/coalition/',
         quote: currentItem,
-        hashtag: "$WEBINAR"
+        hashtag: "$COALITION"
     }, function (response) {
     });
 });
