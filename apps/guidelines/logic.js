@@ -26,6 +26,10 @@ function randomText() {
         txt += " ";
     });
     txt = txt.slice(0, -1);
+    txt = txt.replace(" ב "," ב");
+    txt = txt.replace(" ל "," ל");
+    txt = txt.replace(" מ "," מ");
+    txt = txt.replace(" , ",", ");
     return txt
 }
 
@@ -64,15 +68,6 @@ function itemRemove() {
 }
 
 
-function addToCart() {
-    var currentItem = $stock.html();
-    $cart.append('<li class="list-group-item">' +
-        currentItem +
-        '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
-    // console.log(currentItem)
-}
-
-
 $("#change-stock").click(newText);
 // $cart.on("click", "li .cart-remove", itemRemove);
 // $("#add-to-cart").click(addToCart);
@@ -82,9 +77,9 @@ $("#fb-share").on("click", function () {
 
         method: 'share',
         display: 'popup',
-        href: 'http://deanla.com/coalition/',
+        href: 'http://deanla.com/guidelines/',
         quote: currentItem,
-        hashtag: "$COALITION"
+        hashtag: "$GUIDELINES"
     }, function (response) {
     });
 });
@@ -118,31 +113,5 @@ $("body").keypress(function (event) {
 if ($.browser.mobile) {
     $(".web-only").hide()
 }
-// var csvContent = "data:text/csv;charset=utf-8,";
-// var draws = [];
-
-
-////////DATA DOWNLOAD
-// $("#fb-share").on("click", function () {
-//     for (var i = 0; i < 100000; i++) {
-//         res = moreStock();
-//         draws.push(res);
-//         // console.log(i);
-//     }
-//     // console.log(draws)
-//     draws.forEach(function (nums, index) {
-//         dataString = nums.join(",");
-//         csvContent += index < draws.length ? dataString + "\n" : dataString;
-//     })
-//     var encodedUri = encodeURI(csvContent);
-//     // window.open(encodedUri);
-//     // $(this).setAttribute("href")
-//     var link = document.createElement("a");
-//     link.setAttribute("href", encodedUri);
-//     link.setAttribute("download", "my_data.csv");
-//     document.body.appendChild(link); // Required for FF
-//
-//     link.click(); //
-// });
 
 
