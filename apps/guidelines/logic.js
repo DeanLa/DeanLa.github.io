@@ -11,7 +11,7 @@ $.getJSON("data.json", function (data) {
         quantity = quantity * (val.length);
         items.push(val);
     });
-    moreStock();
+    newText();
     console.log(quantity);
     $("#quantity").html(quantity);
 });
@@ -30,7 +30,7 @@ function randomText() {
 }
 
 
-function moreStock() {
+function newText() {
     loader();
     txt = randomText();
     setTimeout(function () {
@@ -40,16 +40,13 @@ function moreStock() {
 }
 
 function random_text() {
-    var arr = ["בוא נמנע מבחירות רביעיות",
-        "זה תפקיד שתפרתי במיוחד בשבילך",
-        "את תהיי מושלמת לתפקיד הזה",
-        "בוא תעשה חצי קדנציה של",
-        "לא על זה תיפול הקואליציה",
-        "יהיה לך עוזר פרלמנטרי בתפקיד הזה",
-        "זה תפקיד משמעותי",
-        "רק את תוכלי למנף תפקיד כזה",
-        "אני סומך עליך",
-        "קהל הבוחרים רוצה שתהיי במשרד הזה"
+    var arr = [
+        "הנה ביבי עולה לשידור",
+        "לאחר ישיבת ממשלה להלן ההנחיות",
+        "כדאי להתחיל לצבור נייר טואלט",
+        "כבר צבאתם על הסופרמרקט?",
+        "שר המים וההשכלה הגבוהה הודיע כי"
+
     ];
     idx = chance.integer({min: 0, max: arr.length - 1});
     return arr[idx]
@@ -76,7 +73,7 @@ function addToCart() {
 }
 
 
-$("#change-stock").click(moreStock);
+$("#change-stock").click(newText);
 // $cart.on("click", "li .cart-remove", itemRemove);
 // $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
@@ -97,7 +94,7 @@ $("body").keypress(function (event) {
     // console.log(k);
     // key K
     if ($.inArray(k, [75, 107, 1500]) >= 0) {
-        moreStock();
+        newText();
     } // key L
     else if ($.inArray(k, [76, 108, 1498]) >= 0) {
         addToCart();
