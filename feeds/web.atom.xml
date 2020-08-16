@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>DeanLa - Web</title><link href="http://deanla.com/" rel="alternate"></link><link href="http://deanla.com/feeds/web.atom.xml" rel="self"></link><id>http://deanla.com/</id><updated>2018-12-09T21:00:00+02:00</updated><entry><title>My New Website: epidemic.co.il</title><link href="http://deanla.com/introducing-epidemic.html" rel="alternate"></link><published>2018-12-09T21:00:00+02:00</published><updated>2018-12-09T21:00:00+02:00</updated><author><name>Dean</name></author><id>tag:deanla.com,2018-12-09:/introducing-epidemic.html</id><summary type="html">&lt;p&gt;My new website &lt;a href="http://www.epidemic.co.il"&gt;Epidemic&lt;/a&gt; (Hebrew) is up and running.&lt;br&gt;
+Epidemic is an open data public health project focused on making disease data accessible to the public.
+The website uses mainly Bokeh with some basic css and javascript, and has many options such as:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Viewing disease progression chart for dozens of …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;My new website &lt;a href="http://www.epidemic.co.il"&gt;Epidemic&lt;/a&gt; (Hebrew) is up and running.&lt;br&gt;
+Epidemic is an open data public health project focused on making disease data accessible to the public.
+The website uses mainly Bokeh with some basic css and javascript, and has many options such as:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Viewing disease progression chart for dozens of disease&lt;/li&gt;
+&lt;li&gt;Viewing disease progression by regions in the country&lt;/li&gt;
+&lt;li&gt;Downloading data as machine-readable CSVs&lt;/li&gt;
+&lt;li&gt;Viewing disease information&lt;/li&gt;
+&lt;li&gt;Dynamic ranges&lt;/li&gt;
+&lt;li&gt;Bar chart to easily understand aggregated cases by region&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I am really proud of this project as the Israeli Ministry of Health serves this data in a non friendly website with
+many messy Excel files. The first part of this project was to crawl the website and get the data.
+This project is in my &lt;a href="https://github.com/DeanLa/imoh"&gt;github&lt;/a&gt; and is free for use.
+The second part is the Bokeh server on top of this crawler, which has taught my a lot. I will hopefully show some the
+things I've learned in future posts.&lt;/p&gt;</content><category term="bokeh"></category><category term="health"></category><category term="open data"></category></entry></feed>
