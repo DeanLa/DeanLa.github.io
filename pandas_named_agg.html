@@ -318,7 +318,7 @@ DeanLa            </a>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Dataset" data-toc-modified-id="Dataset-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Dataset</a></span></li><li><span><a href="#Group-By" data-toc-modified-id="Group-By-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Group By</a></span><ul class="toc-item"><li><span><a href="#The-easy-stuff" data-toc-modified-id="The-easy-stuff-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>The easy stuff</a></span></li><li><span><a href="#It's-getting-more-complex" data-toc-modified-id="It's-getting-more-complex-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>It's getting more complex</a></span></li><li><span><a href="#Replacing-the-as-keyword-from-sql" data-toc-modified-id="Replacing-the-as-keyword-from-sql-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Replacing the <code>as</code> keyword from sql</a></span></li><li><span><a href="#You-need-pd.NamedAgg" data-toc-modified-id="You-need-pd.NamedAgg-2.4"><span class="toc-item-num">2.4&nbsp;&nbsp;</span>You need <code>pd.NamedAgg</code></a></span></li></ul></li><li><span><a href="#Complex-agg-function" data-toc-modified-id="Complex-agg-function-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Complex <code>agg</code> function</a></span><ul class="toc-item"><li><span><a href="#You-don't-really-need-pd.NamedAgg" data-toc-modified-id="You-don't-really-need-pd.NamedAgg-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>You don't really need <code>pd.NamedAgg</code></a></span></li></ul></li><li><span><a href="#tl;dr" data-toc-modified-id="tl;dr-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>tl;dr</a></span><ul class="toc-item"><li><span><a href="#Syntax" data-toc-modified-id="Syntax-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Syntax</a></span></li><li><span><a href="#Example" data-toc-modified-id="Example-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Example</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Dataset" data-toc-modified-id="Dataset-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Dataset</a></span></li><li><span><a href="#Group-By" data-toc-modified-id="Group-By-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Group By</a></span><ul class="toc-item"><li><span><a href="#The-easy-stuff" data-toc-modified-id="The-easy-stuff-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>The easy stuff</a></span></li><li><span><a href="#It's-getting-more-complex" data-toc-modified-id="It's-getting-more-complex-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>It's getting more complex</a></span></li><li><span><a href="#Replacing-the-as-keyword-from-SQL" data-toc-modified-id="Replacing-the-as-keyword-from-SQL-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Replacing the <code>as</code> keyword from SQL</a></span></li><li><span><a href="#You-need-pd.NamedAgg" data-toc-modified-id="You-need-pd.NamedAgg-2.4"><span class="toc-item-num">2.4&nbsp;&nbsp;</span>You need <code>pd.NamedAgg</code></a></span></li></ul></li><li><span><a href="#Complex-agg-function" data-toc-modified-id="Complex-agg-function-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Complex <code>agg</code> function</a></span><ul class="toc-item"><li><span><a href="#You-don't-really-need-pd.NamedAgg" data-toc-modified-id="You-don't-really-need-pd.NamedAgg-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>You don't really need <code>pd.NamedAgg</code></a></span></li></ul></li><li><span><a href="#tl;dr" data-toc-modified-id="tl;dr-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>tl;dr</a></span><ul class="toc-item"><li><span><a href="#Syntax" data-toc-modified-id="Syntax-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>Syntax</a></span></li><li><span><a href="#Example" data-toc-modified-id="Example-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Example</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -335,7 +335,7 @@ The <code>as</code> keyword from SQL is a wonderful one. You can create a comple
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -365,7 +365,7 @@ The <code>as</code> keyword from SQL is a wonderful one. You can create a comple
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_wine</span>
@@ -385,7 +385,7 @@ The <code>as</code> keyword from SQL is a wonderful one. You can create a comple
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[69]:</div>
+<div class="prompt output_prompt">Out[85]:</div>
 
 
 
@@ -416,39 +416,39 @@ The <code>as</code> keyword from SQL is a wonderful one. You can create a comple
   </thead>
   <tbody>
     <tr>
-      <th>10</th>
-      <td>14.10</td>
-      <td>5.75</td>
-      <td>1.25</td>
-      <td>class_0</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>12.29</td>
-      <td>2.90</td>
-      <td>1.23</td>
+      <th>124</th>
+      <td>11.87</td>
+      <td>2.80</td>
+      <td>0.75</td>
       <td>class_1</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>14.75</td>
-      <td>5.40</td>
-      <td>1.25</td>
-      <td>class_0</td>
+      <th>86</th>
+      <td>12.16</td>
+      <td>2.45</td>
+      <td>1.33</td>
+      <td>class_1</td>
     </tr>
     <tr>
-      <th>150</th>
-      <td>13.50</td>
-      <td>8.60</td>
-      <td>0.59</td>
+      <th>163</th>
+      <td>12.96</td>
+      <td>5.28</td>
+      <td>0.68</td>
       <td>class_2</td>
     </tr>
     <tr>
-      <th>98</th>
-      <td>12.37</td>
-      <td>4.50</td>
+      <th>4</th>
+      <td>13.24</td>
+      <td>4.32</td>
       <td>1.04</td>
-      <td>class_1</td>
+      <td>class_0</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>13.45</td>
+      <td>10.68</td>
+      <td>0.85</td>
+      <td>class_2</td>
     </tr>
     <tr>
       <th>137</th>
@@ -496,7 +496,7 @@ If you just want one aggregation function, and it happens to be a very basic one
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -512,7 +512,7 @@ If you just want one aggregation function, and it happens to be a very basic one
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[70]:</div>
+<div class="prompt output_prompt">Out[86]:</div>
 
 
 
@@ -587,7 +587,7 @@ If you just want one aggregation function, and it happens to be a very basic one
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alcohol</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -603,7 +603,7 @@ If you just want one aggregation function, and it happens to be a very basic one
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[71]:</div>
+<div class="prompt output_prompt">Out[87]:</div>
 
 
 
@@ -633,7 +633,7 @@ Name: alcohol, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">alcohol</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;count&#39;</span><span class="p">])</span>
@@ -649,7 +649,7 @@ Name: alcohol, dtype: float64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[72]:</div>
+<div class="prompt output_prompt">Out[88]:</div>
 
 
 
@@ -712,14 +712,14 @@ Name: alcohol, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="It's-getting-more-complex">It's getting more complex<a class="anchor-link" href="#It's-getting-more-complex">&#182;</a></h2><p>If you want two aggregation functions, and more than one, but not all columns, it's becoming more complex, and code gets less elegant.</p>
+<h2 id="It's-getting-more-complex">It's getting more complex<a class="anchor-link" href="#It's-getting-more-complex">&#182;</a></h2><p>Now let's say you need two aggregation functions, and on more than one columns, but not all column. It's becoming more complex, and the code gets less elegant.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)[[</span><span class="s1">&#39;alcohol&#39;</span><span class="p">,</span><span class="s1">&#39;hue&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;count&#39;</span><span class="p">])</span>
@@ -735,7 +735,7 @@ Name: alcohol, dtype: float64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[73]:</div>
+<div class="prompt output_prompt">Out[89]:</div>
 
 
 
@@ -827,20 +827,12 @@ Also, maybe I don't need <strong>all</strong> functions on <strong>all</strong> 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Replacing-the-as-keyword-from-sql">Replacing the <code>as</code> keyword from sql<a class="anchor-link" href="#Replacing-the-as-keyword-from-sql">&#182;</a></h2><p>sql provides an important keyword when using <code>group by</code>. The <code>as</code> keyword essentially lets you call whichever aggregation function you want. If I want two different aggregation functions,  on two different columns, just write the functions and give them a new name.</p>
+<h2 id="Replacing-the-as-keyword-from-SQL">Replacing the <code>as</code> keyword from SQL<a class="anchor-link" href="#Replacing-the-as-keyword-from-SQL">&#182;</a></h2><p>SQL provides an important keyword when using <code>group by</code>. The <code>as</code> keyword essentially lets you call whichever aggregation function you want. If I want two different aggregation functions,  on two separate columns, simply write the functions and give them a new name.</p>
 <div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">class</span><span class="p">,</span> <span class="k">sum</span><span class="p">(</span><span class="n">alcohol</span><span class="p">)</span> <span class="k">as</span> <span class="n">sum_alcohol</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="n">hue</span><span class="p">)</span> <span class="k">as</span> <span class="n">count_hue</span>
 <span class="k">from</span> <span class="n">df</span>
 <span class="k">group</span> <span class="k">by</span> <span class="k">class</span>
 </pre></div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>It was to be really hard replicating that. You needed a very complex dictionary on that looked like this</p>
+<p>It used to be hard replicating that. You needed a very confusing dictionary structure that looked like this</p>
 <div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
     <span class="s1">&#39;alcohol&#39;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s1">&#39;sum_alcohol&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span>
@@ -850,8 +842,8 @@ Also, maybe I don't need <strong>all</strong> functions on <strong>all</strong> 
     <span class="p">}</span>
 <span class="p">})</span>
 </pre></div>
-<p>It would have worked, but first of all, it's pretty ugly with all those nested dicts, and it would still return a <code>MultiIndex</code> on the columns.<br>
-The solution comes with <code>pd.NamedAgg</code>. They way to use it is still with the agg function, which now accepts <code>**kwargs</code>. Just provide it with a <code>NamedAgg</code> using the following template.</p>
+<p>It would have worked, but first of all, it's pretty not very elegant with all those nested dicts, and it would still return a <code>MultiIndex</code> on the columns.<br>
+The solution comes with <code>pd.NamedAgg</code>. The way to use it is still with the agg function, which now accepts <code>**kwargs</code>. Just provide it with a <code>NamedAgg</code> using the following template.</p>
 <table>
 <thead><tr>
 <th style="text-align:left">Language</th>
@@ -884,7 +876,7 @@ The solution comes with <code>pd.NamedAgg</code>. They way to use it is still wi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
@@ -903,7 +895,7 @@ The solution comes with <code>pd.NamedAgg</code>. They way to use it is still wi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[74]:</div>
+<div class="prompt output_prompt">Out[90]:</div>
 
 
 
@@ -982,7 +974,7 @@ The solution comes with <code>pd.NamedAgg</code>. They way to use it is still wi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;alcohol&#39;</span><span class="p">:[</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="s1">&#39;hue&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">prod</span><span class="p">()</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))]})</span>
@@ -998,7 +990,7 @@ The solution comes with <code>pd.NamedAgg</code>. They way to use it is still wi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[75]:</div>
+<div class="prompt output_prompt">Out[91]:</div>
 
 
 
@@ -1080,7 +1072,7 @@ The solution comes with <code>pd.NamedAgg</code>. They way to use it is still wi
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But as you can observe, we remain with a <code>MultiIndex</code> on columns and a column named <code>&lt;lambda_0&gt;</code>. Renaming this, and would be hell. Imagine your own code 6 months from now, when you suddenly meet this line: <code>df.rename(columns={'&lt;lambda_0&gt;':'geomean'})</code>.  Blah.
+<p>But as you can observe, we remain with a <code>MultiIndex</code> on columns and a column named <code>&lt;lambda_0&gt;</code>. Renaming this, and would be hell. Imagine reading your own code 6 months from now, when you suddenly meet this line: <code>df.rename(columns={'&lt;lambda_0&gt;':'geomean'})</code>.  Blah 🤢.
 <code>pandas</code> will give it a readable name if you use <code>def function(x):</code> but, that may sometimes have the overhead of writing small unnecessary functions.
 <code>NamedAgg</code> takes care of all this hassle. It can easily be fed lambda functions with names given on the <code>agg</code> method.</p>
 
@@ -1089,7 +1081,7 @@ The solution comes with <code>pd.NamedAgg</code>. They way to use it is still wi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
@@ -1108,7 +1100,7 @@ The solution comes with <code>pd.NamedAgg</code>. They way to use it is still wi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[76]:</div>
+<div class="prompt output_prompt">Out[92]:</div>
 
 
 
@@ -1179,7 +1171,7 @@ Indeed, <code>NamedAgg</code> more than being an API innovation, it's a framewor
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tmp_agg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="s1">&#39;tmp_col&#39;</span><span class="p">,</span> <span class="s1">&#39;somefunc&#39;</span><span class="p">)</span>
@@ -1223,7 +1215,7 @@ The <code>agg</code> method is smart enough. When given many <code>**kwargs</cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
@@ -1242,7 +1234,7 @@ The <code>agg</code> method is smart enough. When given many <code>**kwargs</cod
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[78]:</div>
+<div class="prompt output_prompt">Out[94]:</div>
 
 
 
@@ -1444,10 +1436,10 @@ The <code>agg</code> method is smart enough. When given many <code>**kwargs</cod
       <a href="./tag/talk.html">talk</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="./tag/python.html">python</a>
+      <a href="./tag/pandas.html">pandas</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="./tag/pandas.html">pandas</a>
+      <a href="./tag/python.html">python</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="./tag/neural-networks.html">neural networks</a>
@@ -1456,40 +1448,40 @@ The <code>agg</code> method is smart enough. When given many <code>**kwargs</cod
       <a href="./tag/time-series.html">time series</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/health.html">health</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/clip.html">clip</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/matplotlib.html">matplotlib</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/pipe.html">pipe</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/bokeh.html">bokeh</a>
-    </li>
-    <li class="list-group-item tag-4">
       <a href="./tag/pymc.html">pymc</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/scipy.html">scipy</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/hacks.html">hacks</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/groupby.html">groupby</a>
     </li>
     <li class="list-group-item tag-4">
+      <a href="./tag/bokeh.html">bokeh</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/scipy.html">scipy</a>
+    </li>
+    <li class="list-group-item tag-4">
       <a href="./tag/resample.html">resample</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/matplotlib.html">matplotlib</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/style.html">style</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/pipe.html">pipe</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/open-data.html">open data</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/style.html">style</a>
+      <a href="./tag/clip.html">clip</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/health.html">health</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/hacks.html">hacks</a>
     </li>
   </ul>
 </li>
