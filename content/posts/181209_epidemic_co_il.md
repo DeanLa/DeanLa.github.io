@@ -2,7 +2,7 @@ Title: My New Website: epidemic.co.il
 Date: 2018-12-09 21:00
 Modified: 2018-12-09 21:00
 Status: published
-Category: Talks
+Category: Web
 Tags: bokeh, health, open data
 Slug: introducing-epidemic
 Author: Dean

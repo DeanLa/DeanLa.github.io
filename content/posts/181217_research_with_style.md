@@ -2,7 +2,7 @@ Title: Research with Style
 Date: 2018-12-17 21:00
 Modified: 2018-12-17 21:00
 Status: published
-Category: Talks
+Category: Pandas
 Tags: pandas, style, python
 Slug: research_with_style
 Author: Dean
