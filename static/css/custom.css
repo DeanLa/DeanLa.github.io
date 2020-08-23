@@ -262,25 +262,29 @@ a {
     -moz-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.5);
     box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.5);
     background-color: #ffeee9;
+    transition: transform 1s;
+
 }
 
 .on-list-social {
     font-size: 1.2em;
     padding-top: 5px;
     padding-bottom: 5px;
+
 }
 
 .on-list.well:hover {
-    position: relative;
-    bottom: 5px;
-    right: 15px;
-
+    /*position: relative;*/
+    /*bottom: 5px;*/
+    /*right: 15px;*/
+    transform: translate(-15px, -5px);
 }
 
 .on-list-social.well:hover {
-    position: relative;
-    bottom: 2px;
-    right: 5px;
+    /*position: relative;*/
+    /*bottom: 2px;*/
+    /*right: 5px;*/
+    transform: translate(-5px, -2px);
 
 
 }
