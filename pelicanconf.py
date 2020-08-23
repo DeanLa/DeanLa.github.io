@@ -84,7 +84,10 @@ EXTRA_PATH_METADATA = {
 # EXTRA_HEADER = open('_nb_header.html').read()  # .decode('utf-8')
 EXTRA_HEADER = open('_nb_header.html', encoding='utf-8').read()
 
+# Artical Info
+SHOW_ARTICLE_CATEGORY = False
 SHOW_ARTICLE_AUTHOR = False
+SHOW_SERIES=True
 LOAD_CONTENT_CACHE = False
 DISPLAY_BREADCRUMBS = False
 

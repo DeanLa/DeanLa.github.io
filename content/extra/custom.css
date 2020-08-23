@@ -261,6 +261,7 @@ a {
     -webkit-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
     box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
+    background-color: #ffebd0;
 }
 
 .on-list.well:hover {
@@ -268,4 +269,8 @@ a {
     bottom: 5px;
     right: 15px;
 
+}
+
+#banner .copy {
+    border-radius: 15px;
 }
