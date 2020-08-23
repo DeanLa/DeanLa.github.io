@@ -264,6 +264,12 @@ a {
     background-color: #ffeee9;
 }
 
+.on-list-social {
+    font-size: 1.2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .on-list.well:hover {
     position: relative;
     bottom: 5px;
@@ -271,10 +277,11 @@ a {
 
 }
 
-.on-list-side.well:hover {
+.on-list-social.well:hover {
     position: relative;
     bottom: 2px;
     right: 5px;
+
 
 }
 
