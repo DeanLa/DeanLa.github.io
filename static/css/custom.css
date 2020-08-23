@@ -271,6 +271,13 @@ a {
 
 }
 
+.on-list-side.well:hover {
+    position: relative;
+    bottom: 2px;
+    right: 5px;
+
+}
+
 #banner .copy {
     border-radius: 15px;
 }
