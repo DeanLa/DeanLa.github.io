@@ -9,6 +9,8 @@
 
 img.on-list {
     width: 100%;
+    border-radius: 15px;
+    border: #bf3e11 solid 1px;
 }
 
 .row.on-list {
@@ -252,4 +254,18 @@ table th[class*="col-"] {
 
 a {
     color: steelblue;
+}
+
+.well {
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
+}
+
+.on-list.well:hover {
+    position: relative;
+    bottom: 5px;
+    right: 15px;
+
 }

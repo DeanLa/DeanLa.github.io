@@ -5,7 +5,8 @@
 AUTHOR = 'Dean Langsam'
 SITENAME = 'DeanLa'
 # SITEURL = ''
-SITEURL = 'http://deanla.com'
+SITEURL = 'https://deanla.com'
+FULLURL = SITEURL
 RELATIVE_URLS = True
 
 PATH = 'content'
@@ -59,7 +60,6 @@ PLUGINS = [
     'liquid_tags.notebook',
     'liquid_tags.include_code',
     'render_math',
-    'pelican-ipynb.markup',
     'tipue_search',
     'render_math']
 
@@ -81,7 +81,8 @@ EXTRA_PATH_METADATA = {
 
 }
 
-EXTRA_HEADER = open('_nb_header.html').read()  # .decode('utf-8')
+# EXTRA_HEADER = open('_nb_header.html').read()  # .decode('utf-8')
+EXTRA_HEADER = open('_nb_header.html', encoding='utf-8').read()
 
 SHOW_ARTICLE_AUTHOR = False
 LOAD_CONTENT_CACHE = False
@@ -98,3 +99,5 @@ DISPLAY_ARTICLE_INFO_ON_INDEX = True
 # GOOGLE_ANALYTICS_UNIVERSAL
 # GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
 DISQUS_SITENAME = "deanla"
+
+OPEN_GRAPH_IMAGE = BANNER

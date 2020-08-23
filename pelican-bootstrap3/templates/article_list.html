@@ -3,11 +3,12 @@
     {% set w=6 %}
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
+            {% set article_link=SITEURL+'/'+article.url %}
             <div class="row on-list well">
                 <article>
                     {% if loop.index % 2 == 0 %}
                         <div class="col-sm-{{ w }}">
-                            <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+                            <h2><a href="{{ article_link }}">{{ article.title }}</a></h2>
                             {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                                 <div class="">
                                     {% include "includes/article_info.html" %}
@@ -18,11 +19,14 @@
                             </div>
                         </div>
                         <div class="col-sm-{{ 12-w }}">
-                            <img class="on-list" src="{{ SITEURL }}/{{ article.og_image }}" alt="image">
+                            <a href="{{ article_link }}">
+                                <img class="on-list" src="{{ SITEURL }}/{{ article.og_image }}"
+                                     alt="{{ article.slug }}">
+                            </a>
                         </div>
                     {% else %}
                         <div class="col-sm-{{ w }} col-sm-push-{{ 12-w }}">
-                            <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+                            <h2><a href="{{ article_link }}">{{ article.title }}</a></h2>
                             {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                                 <div class="">
                                     {% include "includes/article_info.html" %}
@@ -33,7 +37,10 @@
                             </div>
                         </div>
                         <div class="col-sm-{{ 12-w }} col-sm-pull-{{ w }}">
-                            <img class="on-list" src="{{ SITEURL }}/{{ article.og_image }}" alt="image">
+                            <a href="{{ article_link }}">
+                                <img class="on-list" src="{{ SITEURL }}/{{ article.og_image }}"
+                                     alt="{{ article.slug }}">
+                            </a>
                         </div>
                     {% endif %}
                     <hr/>
