@@ -258,10 +258,10 @@ a {
 
 .well {
     border-radius: 15px;
-    -webkit-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
-    box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.6);
-    background-color: #ffebd0;
+    -webkit-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 18px -9px rgba(0, 0, 0, 0.5);
+    background-color: #ffeee9;
 }
 
 .on-list.well:hover {
