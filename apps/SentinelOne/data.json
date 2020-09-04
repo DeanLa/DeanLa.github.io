@@ -33,10 +33,10 @@
     "Y Combinator",
     "Wikipedia",
     "Ebay",
-    "Amdocs",
     "Waze",
     "AirBNB",
     "Whatsapp",
+    "Telegram",
     "Zoom",
     "Yelp",
     "WeWork",
@@ -47,7 +47,8 @@
     "Elon Musk",
     "docker containers",
     "virtual currency",
-    "a venture capital"
+    "a venture capital",
+    "an endpoint protection"
   ],
   "for": [
     "for",
@@ -70,7 +71,7 @@
     "the public sector",
     "chess",
     "fashion models",
-    "Python",
+    "python",
     "joint work spaces",
     "restaurant reviews",
     "movie reviews",
@@ -83,7 +84,7 @@
     "live streaming",
     "blockchain",
     "open-source",
-    "podcastin",
+    "podcasting",
     "cryptocurrency",
     "cybersecurity"
   ],
@@ -102,7 +103,7 @@
     "an app",
     "a web framework",
     "a social network",
-    "Python",
+    "python",
     "GO",
     "GPS",
     "ReactJS",
@@ -127,7 +128,9 @@
     "bitcoin",
     "ride sharing",
     "blockchain",
-    "virtue signaling"
+    "virtue signaling",
+    "C++",
+    "Rust"
   ],
   "aaS": [
     "as a service",
@@ -151,7 +154,9 @@
     "composing a symphony based solely upon",
     "extreme vetting",
     "automatically testing",
-    "quickly deploying"
+    "quickly deploying",
+    "remote working on",
+    ""
   ],
   "noun": [
     "the sun",
@@ -176,15 +181,20 @@
     "a band of misfits",
     "impact investments",
     "ionized water",
+    "vitamin water",
     "the voice of Ira Glass",
+    "the unemployment rate",
     "hashtags",
     "Joe Biden",
     "Batman",
     "the cringe feeling you get when watching movies from the 60s",
     "COVID-19",
     "Coronavirus",
-    ""
-
+    "face masks",
+    "social distancing",
+    "the S&P500",
+    "the upcoming elections",
+    "people that say \"we should totaly have lunch\" but never do"
   ],
   "h2": [
     ".</h2>"
