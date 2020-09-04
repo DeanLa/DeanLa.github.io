@@ -97,3 +97,12 @@ li {
     background-color: #4303F3;
     border-color: #4303F3
 }
+
+#head-logo img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+    display: inline;
+}
