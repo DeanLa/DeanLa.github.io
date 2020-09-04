@@ -28,6 +28,7 @@ function randomText() {
     txt = txt.slice(0, -1);
     txt = txt.replace(" ,",",");
     txt = txt.replace(" .",".");
+    txt = txt.replace("  "," ");
 
     return txt
 }
