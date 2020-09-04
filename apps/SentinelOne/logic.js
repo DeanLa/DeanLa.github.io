@@ -26,6 +26,9 @@ function randomText() {
         txt += " ";
     });
     txt = txt.slice(0, -1);
+    txt = txt.replace(" ,",",");
+    txt = txt.replace(" .",".");
+
     return txt
 }
 
