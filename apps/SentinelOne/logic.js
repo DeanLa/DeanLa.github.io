@@ -20,16 +20,18 @@ function randomText() {
     var txt = "";
     // var whichVars = [];
     $.each(items, function (i, item) {
-        // idx = Math.floor(Math.random() * item.length);
         idx = chance.integer({min: 0, max: item.length - 1});
         txt += item[idx];
         txt += " ";
     });
+    console.log(txt);
+
     txt = txt.slice(0, -1);
     txt = txt.replace(" ,",",");
     txt = txt.replace(" .",".");
+    txt = txt.replace(" .",".");
     txt = txt.replace("  "," ");
-
+    console.log();
     return txt
 }
 
