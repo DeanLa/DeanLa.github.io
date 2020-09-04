@@ -110,5 +110,10 @@ li {
 .well#pitch {
     border: #6b0aea 2px solid;
     border-radius: 5px;
-    background-color: white;
+}
+
+.btn {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
 }
