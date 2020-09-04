@@ -4,7 +4,7 @@
 var items = [];
 var chance = Chance();
 var $cart = $("#my-cart");
-var $stock = $("#stock");
+var $stock = $("#main-gen");
 $.getJSON("stock.json", function (data) {
     quantity = 1;
     // console.log(quantity);

@@ -3,7 +3,7 @@
  */
 var items = [];
 var chance = Chance();
-var $stock = $("#stock");
+var $stock = $("#main-gen");
 $.getJSON("webinar.json", function (data) {
     quantity = 1;
     // console.log(quantity);

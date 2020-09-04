@@ -12,7 +12,7 @@ for
 var items = [];
 var chance = Chance();
 var $cart = $("#my-cart");
-var $stock = $("#stock");
+var $stock = $("#main-gen");
 $.getJSON("stock.json", function (data) {
     quantity = 1;
     // console.log(quantity);
@@ -47,15 +47,6 @@ function moreStock(param='new') {
 
 function itemRemove() {
     $(this).parent().remove()
-}
-
-
-function addToCart() {
-    var currentItem = $stock.html();
-    $cart.append('<li class="list-group-item slide">' +
-        '<div class="slide-text">' + currentItem + '</div>' +
-        '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
-    // console.log(currentItem)
 }
 
 
