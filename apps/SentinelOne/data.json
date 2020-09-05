@@ -40,11 +40,15 @@
     "Zoom",
     "Yelp",
     "WeWork",
+    "fintech",
+    "insurtech",
     "Shopify",
     "Photoshop",
     "Crunchbase",
     "SpaceX",
     "Elon Musk",
+    "Tesla",
+    "the stock market",
     "docker containers",
     "virtual currency",
     "a venture capital",
@@ -130,7 +134,12 @@
     "blockchain",
     "virtue signaling",
     "C++",
-    "Rust"
+    "Rust",
+    "IDA",
+    "a machine learning classifier",
+    "image recognition",
+    "text-2-speech"
+
   ],
   "aaS": [
     "as a service",
@@ -160,6 +169,7 @@
   ],
   "noun": [
     "the sun",
+    "GPUs",
     "teens",
     "your data",
     "databases",
@@ -174,6 +184,7 @@
     "configuration files",
     "hash tables",
     "basketball legend Magic Johnson",
+    "Ruth Bader Ginsburg",
     "faster than light space travel",
     "the feeling of being lonely",
     "augmented reality",
@@ -194,7 +205,18 @@
     "social distancing",
     "the S&P500",
     "the upcoming elections",
-    "people that say \"we should totaly have lunch\" but never do"
+    "people that say \"we should totaly have lunch\" but never do",
+    "the Metric system",
+    "the Imperial system",
+    "a movie based on a book based on a movie",
+    "an audiobook based on a book based on a podcast",
+    "covfefe",
+    "The Grand Canyon",
+    "Yosemite National Park",
+    "the New England fall foliage",
+    "binary opcodes",
+    "hotdog not hotdog"
+
   ],
   "h2": [
     ".</h2>"

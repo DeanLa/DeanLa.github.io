@@ -35,7 +35,7 @@ body {
 
 #main-gen {
     margin: 20px 0 35px 0;
-    min-height: 190px;
+    min-height: 210px;
 
 }
 
@@ -116,4 +116,7 @@ li {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
+}
+#instructions{
+    font-size: 0.75em;
 }
