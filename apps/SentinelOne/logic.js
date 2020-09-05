@@ -30,7 +30,7 @@ function randomText() {
     txt = txt.replace(" ,",",");
     txt = txt.replace(" .",".");
     txt = txt.replace(" .",".");
-    txt = txt.replace(" :",":PMפ");
+    txt = txt.replace(" :",":");
     txt = txt.replace("  "," ");
     console.log();
     return txt
