@@ -1,7 +1,57 @@
-.red{
+body {
+    /*height: 100%;*/
+    width: 100%;
+    /*position: relative;*/
+    font-family: 'Alef', sans-serif;
+}
+
+.red {
     background-color: lightcoral;
 }
 
 .green {
     background-color: lightgreen;
+}
+
+#bg {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /*opacity: 0.5;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0.3;
+}
+
+.container {
+    /*position: relative;*/
+    padding-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    min-height: 80%;
+    opacity: 0.91;
+    border: steelblue 2px solid;
+}
+#head-logo {
+    font-family: 'Alef', sans-serif;
+    /*background-image: url('bgtop.png');*/
+    background-size: cover;
+    color: black;
+    width: 100%;
+    margin: 0;
+    min-height: 100px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alef', sans-serif;
+}
+
+.well{
+    opacity: 0.9
+}
+
+.well table{
+    opacity: 1;
 }

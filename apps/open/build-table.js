@@ -1,6 +1,7 @@
 console.log(data);
 var today = new Date();
-var time = today.getHours() + ":" + today.getMinutes();
+var time = (today.getHours() < 10 ? '0' : '') + today.getHours() + ":" +
+    (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
 var weekday = today.getDay() + 1;
 console.log(time);
 
@@ -11,19 +12,45 @@ function totalMinutes(s) {
 }
 
 function isBetween(check, between) {
-    // debugger;
     check = totalMinutes(check);
-    // debugger;
     after = totalMinutes(between.split("-")[0]);
     before = totalMinutes(between.split("-")[1]);
-    console.log(check);
-    console.log(before);
-    console.log(after);
-    // debugger;
     return (check > after) & (check < before)
-    // after
 
 }
+
+function createNowOpen(element, row) {
+    let hours = element["hours"];
+    let cell = row.insertCell();
+    if (weekday in hours) {
+        let td = hours[weekday];
+        console.log(td);
+        for (let hour of td) {
+            if (isBetween(time, hour)) {
+                text = document.createTextNode("פתוח");
+                cell.appendChild(text);
+                cell.classList.add("green");
+                return
+            }
+        }
+
+    }
+    text = document.createTextNode("סגור");
+    cell.appendChild(text);
+    cell.classList.add("red");
+}
+
+function createOpenHours(element, row) {
+    let hours = element["hours"];
+    let cell = row.insertCell();
+    if (weekday in hours) {
+        let td = hours[weekday];
+        console.log(td);
+        text = document.createTextNode(td.join(", "));
+        cell.appendChild(text);
+    }
+}
+
 
 function generateTable(table, data) {
     for (let element of data) {
@@ -33,38 +60,10 @@ function generateTable(table, data) {
         let text = document.createTextNode(element["name"]);
         place.appendChild(text);
         // hours
-        // debugger;
-        let hours = element["hours"];
-        let cell = row.insertCell();
-        var done = 0;
-        if (weekday in hours) {
-            let td = hours[weekday];
-            console.log(td);
-            for (let hour of td) {
-                if (isBetween(time, hour)) {
-                    text = document.createTextNode("פתוח");
-                    cell.appendChild(text);
-                    cell.classList.add("green");
-                    done = 1
-                }
-            }
-            if (done) {
-                continue;
-            }
+        createNowOpen(element, row);
+        createOpenHours(element, row)
 
-        }
-        text = document.createTextNode("סגור");
-        cell.appendChild(text);
-        cell.classList.add("red");
 
-        // }
-        // console.log(hours[key])
-        // for (key in element) {
-        //     let cell = row.insertCell();
-        //     cell.classList.add('green');
-        //     let text = document.createTextNode(element[key]);
-        //     cell.appendChild(text);
-        // }
     }
 }
 
@@ -86,12 +85,14 @@ function makeTable(table, data, head) {
     generateTableHead(table, head);
 }
 
-let header = document.querySelector(".header");
-header.appendChild(document.createTextNode("פתוח עכשיו"));
-document.querySelector(".timenow").appendChild(document.createTextNode(today));
+let trDays = ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"];
+// let header = document.querySelector(".header");
+// header.appendChild(document.createTextNode("פתוח עכשיו?"));
+htext = trDays[weekday - 1] + " " + time;
+document.querySelector(".timenow").appendChild(document.createTextNode(htext));
 // Table
 let table = document.querySelector("table");
-let head = ["ענף", "פתוח עכשיו?"];
+let head = ["ענף", "פתוח עכשיו?", "שעות פתיחה היום"];
 
 var data;
 $.getJSON("data.json", function (json) {
