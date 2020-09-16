@@ -51,6 +51,16 @@ function createOpenHours(element, row) {
     }
 }
 
+function createPhone(element, row) {
+    cell = row.insertCell();
+    if ("phone" in element) {
+        phone = element['phone'];
+        text = document.createTextNode(phone);
+        cell.appendChild(text);
+
+    }
+
+}
 
 function generateTable(table, data) {
     for (let element of data) {
@@ -61,7 +71,8 @@ function generateTable(table, data) {
         place.appendChild(text);
         // hours
         createNowOpen(element, row);
-        createOpenHours(element, row)
+        createOpenHours(element, row);
+        createPhone(element, row);
 
 
     }
@@ -92,7 +103,7 @@ htext = trDays[weekday - 1] + " " + time;
 document.querySelector(".timenow").appendChild(document.createTextNode(htext));
 // Table
 let table = document.querySelector("table");
-let head = ["ענף", "פתוח עכשיו?", "שעות פתיחה היום"];
+let head = ["ענף", "פתוח עכשיו?", "שעות פתיחה היום","טלפון"];
 
 var data;
 $.getJSON("data.json", function (json) {

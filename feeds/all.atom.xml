@@ -13,7 +13,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;It is relatively old now, but on version 0.25, &lt;code&gt;pandas&lt;/code&gt; introduced &lt;code&gt;NamedAgg&lt;/code&gt;. It is mostly a convenience, it's not &lt;strong&gt;huge&lt;/strong&gt;, but for me, it's life-changing.&lt;br&gt;
+&lt;p&gt;It is relatively old now, but on version 0.25, &lt;code&gt;pandas&lt;/code&gt; introduced &lt;a href="https://pandas-docs.github.io/pandas-docs-travis/whatsnew/v0.25.0.html#groupby-aggregation-with-relabeling"&gt;&lt;code&gt;NamedAgg&lt;/code&gt;&lt;/a&gt;. It is mostly a convenience, it's not &lt;strong&gt;huge&lt;/strong&gt;, but for me, it's life-changing.&lt;br&gt;
 The &lt;code&gt;as&lt;/code&gt; keyword from SQL is a wonderful one. You can create a complex function on a database column, and then give it an explicit name. This name can be used later in the pipeline as a reference, or even just as-is for convenience when reading the table.&lt;br&gt;
 &lt;code&gt;pandas&lt;/code&gt;, even though superior to SQL in so many ways, really lacked this until fairly recently. You either do a renaming stage, after receiving multi-index columns or feed the &lt;code&gt;agg&lt;/code&gt; function with a complex dictionary structure. With &lt;code&gt;NamedAgg&lt;/code&gt;, it becomes as easy as the &lt;code&gt;as&lt;/code&gt; keyword, and in my mind, even more elegant.&lt;/p&gt;
 
@@ -45,7 +45,7 @@ The &lt;code&gt;as&lt;/code&gt; keyword from SQL is a wonderful one. You can cre
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Let's load the wine dataset and play with it a bit.&lt;/p&gt;
+&lt;p&gt;Let's load the &lt;a href="https://scikit-learn.org/stable/datasets/index.html#wine-dataset"&gt;wine&lt;/a&gt; dataset and play with it a bit.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
