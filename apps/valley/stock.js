@@ -12,7 +12,7 @@ for
 var items = [];
 var chance = Chance();
 var $cart = $("#my-cart");
-var $stock = $("#main-gen");
+var $stock = $("#stock");
 $.getJSON("stock.json", function (data) {
     quantity = 1;
     // console.log(quantity);
