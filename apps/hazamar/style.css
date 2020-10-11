@@ -29,7 +29,7 @@ body {
     margin-bottom: 0;
     min-height: 80%;
     opacity: 0.85;
-    border: purple 10px solid ;
+    border: purple 10px solid;
     border-radius: 20px;
 }
 
@@ -52,13 +52,31 @@ p, h2, h3, h4 {
     font-family: 'Alef', sans-serif;
     /*background-image: url('logoz.jpg');*/
     background-repeat: repeat;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     /*opacity: 0;*/
     background-size: auto;
     color: white;
     width: 100%;
     margin: 0;
     min-height: 100px;
+}
+
+#head-logo h1, h2 {
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+#head-logo h1{
+    font-size: 4em;
+}
+
+#head-logo h2{
+    font-size: 2.5em;
 }
 
 .btn {
@@ -72,6 +90,7 @@ p, h2, h3, h4 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alef', sans-serif;
+    font-weight: 200;
 }
 
 #change-stock {
