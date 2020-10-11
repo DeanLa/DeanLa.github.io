@@ -96,18 +96,18 @@ function itemRemove() {
 }
 
 
-function addToCart() {
-    var currentItem = $stock.html();
-    $cart.append('<li class="list-group-item">' +
-        currentItem +
-        '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
-    // console.log(currentItem)
-}
+// function addToCart() {
+//     var currentItem = $stock.html();
+//     $cart.append('<li class="list-group-item">' +
+//         currentItem +
+//         '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
+//     // console.log(currentItem)
+// }
 
 
 $("#change-stock").click(moreStock);
-$cart.on("click", "li .cart-remove", itemRemove);
-$("#add-to-cart").click(addToCart);
+// $cart.on("click", "li .cart-remove", itemRemove);
+// $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
     var currentItem = $stock.html();
     FB.ui({
