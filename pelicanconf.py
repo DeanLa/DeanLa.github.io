@@ -39,19 +39,12 @@ SOCIAL = (
     ('LinkedIn', 'https://www.linkedin.com/in/deanla/')
 )
 
-USE_OPEN_GRAPH = True
-OPEN_GRAPH_FB_APP_ID = 259760160731955
-TWITTER_CARDS = True
-
 #
 DEFAULT_PAGINATION = 10
 
+# ----- UI -----
+# Themes and Plugins
 PLUGIN_PATHS = ['pelican-plugins']
-
-THEME = 'pelican-bootstrap3'
-BOOTSTRAP_THEME = 'united'
-
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGINS = [
     'i18n_subsites',
     'series',
@@ -63,14 +56,30 @@ PLUGINS = [
     'tipue_search',
     'render_math']
 
+THEME = 'pelican-bootstrap3'
+BOOTSTRAP_THEME = 'united'
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 I18N_TEMPLATES_LANG = 'en'
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'authors', 'archives', 'search')
 SITEMAP_SAVE_AS = 'sitemap.xml'
+
 # Custom CSS and JS
 CUSTOM_CSS = 'static/css/custom.css'
 CUSTOM_JS = 'static/js/custom.js'
 PYGMENTS_STYLE = 'monokai'
-
+# Sidebar
+DISABLE_SIDEBAR_TITLE_ICONS = False
+DISPLAY_TAGS_INLINE = True
+BOOTSTRAP_FLUID = False
+PAGES_SORT_ATTRIBUTE = 'porder'
+# Github User - Will show repos on
+# GITHUB_USER='DeanLa'
+# GITHUB_SHOW_USER_LINK=False
+# Banner
+BANNER = 'img/intro-bg-narrow.jpg'
+BANNER_SUBTITLE = 'My Blog'
+BANNER_ALL_PAGES = True
+# ----- Static -----
 STATIC_PATHS = ['extra', 'apps', 'img']
 
 EXTRA_PATH_METADATA = {
@@ -78,29 +87,28 @@ EXTRA_PATH_METADATA = {
     'extra/custom.js': {'path': 'static/js/custom.js'},
     'extra/CNAME': {'path': 'CNAME'},
     'apps': {'path': 'apps'},
-
 }
 
-# EXTRA_HEADER = open('_nb_header.html').read()  # .decode('utf-8')
 EXTRA_HEADER = open('_nb_header.html', encoding='utf-8').read()
 
-# Artical Info
+# ----- Artical Info -----
 SHOW_ARTICLE_CATEGORY = False
 SHOW_ARTICLE_AUTHOR = False
-SHOW_SERIES=True
+SHOW_SERIES = True
 LOAD_CONTENT_CACHE = False
 DISPLAY_BREADCRUMBS = False
 
-# Banner
-BANNER = 'img/intro-bg-narrow.jpg'
-BANNER_SUBTITLE = 'My Blog'
-BANNER_ALL_PAGES = True
-
+# Twitter, Facbook, Open Grapg
+USE_OPEN_GRAPH = True
+OPEN_GRAPH_FB_APP_ID = 259760160731955
+OPEN_GRAPH_IMAGE = BANNER
+TWITTER_CARDS = True
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
-# GOOGLE_ANALYTICS
-# GOOGLE_ANALYTICS_UNIVERSAL
-# GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
-DISQUS_SITENAME = "deanla"
+# Analytics
+GOOGLE_ANALYTICS_UNIVERSAL = 'UA-90395782-1'
+GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'auto'
 
-OPEN_GRAPH_IMAGE = BANNER
+# Comments
+DISQUS_SITENAME = "deanla"
+DISQUS_DISPLAY_COUNTS = True

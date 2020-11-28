@@ -13,7 +13,7 @@
 
                 {% if article %}
                     {% if not DISQUS_NO_ID %}
-                        this.page.identifier = '{{article.slug }}';
+                        this.page.identifier = '{{ article.slug }}';
                     {% endif %}
                     {% if SITEURL %}
                         this.page.url = '{{ FULLURL }}/{{ article.url }}';

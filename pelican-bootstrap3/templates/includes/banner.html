@@ -1,24 +1,27 @@
+{#Style#}
 <style>
     #banner {
         background-image: url("{{ SITEURL}}/{{ BANNER }}");
     }
 </style>
+{#Define subtitle#}
+{% if article is defined %}
+    {% set subtitle=article.title %}
+{% elif page is defined %}
+    {% set subtitle=page.title %}
+{% elif tag is defined %}
+    {% set subtitle='Tag: ' + tag.name %}
+{% else %}
+    {% set subtitle=BANNER_SUBTITLE %}
+{% endif %}
 
+{#HTML#}
 <div id="banner">
     <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
         <div class="copy">
             <h1 style="text-transform: none;">{{ SITENAME }}</h1>
-            {% if BANNER_SUBTITLE %}
-                {% if article is defined %}
-                    <p class="intro">{{ article.title }}</p>
-                {% elif page is defined %}
-                    <p class="intro">{{ page.title }}</p>
+            <p class="intro">{{ subtitle }}</p>
 
-                {% else %}
-                    <p class="intro">{{ BANNER_SUBTITLE }}</p>
-                {% endif %}
-
-            {% endif %}
         </div>
     </div>
 </div>
