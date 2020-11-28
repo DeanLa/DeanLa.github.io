@@ -1,48 +1,66 @@
 /**
  * Created by Dean on 14-Jan-17.
  */
-/*
-<Name>
-<we are/it is/the product is/our service is>
-<like/essentially/basically>
-<Famous company>
-for
-<vertical>.
-*/
 var items = [];
 var chance = Chance();
-var $cart = $("#my-cart");
 var $stock = $("#stock");
-$.getJSON("stock.json", function (data) {
+$.getJSON("data.json", function (data) {
     quantity = 1;
     // console.log(quantity);
     $.each(data, function (key, val) {
-        // console.log(val.length);
-        // console.log(quantity);
         quantity = quantity * (val.length);
         items.push(val);
     });
-    param = new URLSearchParams(window.location.search);
-    moreStock(param);
+    newText();
     console.log(quantity);
     $("#quantity").html(quantity);
 });
 
-function moreStock(param='new') {
-    console.log(param)
-    var txt = '';
-    var args = "?product=";
-    if (param == 'new') {
-        // var whichVars = [];
-        $.each(items, function (i, item) {
-            idx = chance.integer({min: 0, max: item.length - 1});
-            txt += item[idx];
-            args += idx + "_"
-        });
-    }
-    $stock.html(txt);
-    history.pushState({},
-        'Random Pitch ' + txt, args.slice(0, args.length - 1))
+function randomText() {
+    var txt = "";
+    // var whichVars = [];
+    $.each(items, function (i, item) {
+        // idx = Math.floor(Math.random() * item.length);
+        idx = chance.integer({min: 0, max: item.length - 1});
+        txt += item[idx];
+        txt += " ";
+    });
+    txt = txt.slice(0, -1);
+    txt = txt.replace(" ב ", " ב");
+    txt = txt.replace(" ל ", " ל");
+    txt = txt.replace(" מ ", " מ");
+    txt = txt.replace(" , ", ", ");
+    return txt
+}
+
+
+function newText() {
+    loader();
+    txt = randomText();
+    setTimeout(function () {
+        $stock.html(txt);
+    }, 1000)
+    // return whichVars;
+}
+
+function random_text() {
+    var arr = [
+        "אופירה חושבת על זה",
+        "סטטיק ובן אל הדליפו לנו",
+        "צדי רמז לנו מי זה",
+        "קיבלנו טיפ מההפקה",
+        "בדקנו את כל הרמזים"
+
+    ];
+    idx = chance.integer({min: 0, max: arr.length - 1});
+    return arr[idx]
+}
+
+function loader() {
+    var base = random_text();
+    var loadgif = '<img id="loader" src="loader.gif" height="30" alt="loader">';
+    base = loadgif + base + loadgif;
+    $stock.html(base);
 }
 
 function itemRemove() {
@@ -50,20 +68,18 @@ function itemRemove() {
 }
 
 
-$("#change-stock").click(moreStock);
-$cart.on("click", "li .cart-remove", itemRemove);
-$("#add-to-cart").click(addToCart);
+$("#change-stock").click(newText);
+// $cart.on("click", "li .cart-remove", itemRemove);
+// $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
     var currentItem = $stock.html();
     FB.ui({
 
         method: 'share',
         display: 'popup',
-        href: 'http://deanla.com/stock/',
-        quote: "קניתי " + currentItem +
-            " בחנות הראנדום סטוק!!! " +
-            "",
-        hashtag: "$RANDOM_STOCK"
+        href: 'http://deanla.com/guidelines/',
+        quote: currentItem,
+        hashtag: "$GUIDELINES"
     }, function (response) {
     });
 });
@@ -73,7 +89,7 @@ $("body").keypress(function (event) {
     // console.log(k);
     // key K
     if ($.inArray(k, [75, 107, 1500]) >= 0) {
-        moreStock();
+        newText();
     } // key L
     else if ($.inArray(k, [76, 108, 1498]) >= 0) {
         addToCart();
@@ -97,3 +113,5 @@ $("body").keypress(function (event) {
 if ($.browser.mobile) {
     $(".web-only").hide()
 }
+
+

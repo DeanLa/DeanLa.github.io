@@ -1,4 +1,7 @@
-Title: About Me
+Title: Dean Langsam
+MenuLabel: About
+POrder: 1
+
 
 I am currently a data scientist at SentinelOne, a rapidly-growing cyber AI company.
 I am interested in data science, machine learning, deep learning, Python scientific programming, data visualizations, and Bayesian modeling.

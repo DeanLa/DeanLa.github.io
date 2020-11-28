@@ -3,7 +3,7 @@
  */
 var items = [];
 var chance = Chance();
-var $stock = $("#stock");
+var $stock = $("#main-gen");
 $.getJSON("webinar.json", function (data) {
     quantity = 1;
     // console.log(quantity);
@@ -75,8 +75,6 @@ function addToCart() {
 
 
 $("#change-stock").click(moreStock);
-$cart.on("click", "li .cart-remove", itemRemove);
-$("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
     var currentItem = $stock.html();
     FB.ui({

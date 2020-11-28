@@ -1,48 +1,68 @@
 /**
  * Created by Dean on 14-Jan-17.
  */
-/*
-<Name>
-<we are/it is/the product is/our service is>
-<like/essentially/basically>
-<Famous company>
-for
-<vertical>.
-*/
 var items = [];
 var chance = Chance();
-var $cart = $("#my-cart");
-var $stock = $("#stock");
-$.getJSON("stock.json", function (data) {
+var $stock = $("#main-gen");
+$.getJSON("data.json", function (data) {
     quantity = 1;
     // console.log(quantity);
     $.each(data, function (key, val) {
-        // console.log(val.length);
-        // console.log(quantity);
         quantity = quantity * (val.length);
         items.push(val);
     });
-    param = new URLSearchParams(window.location.search);
-    moreStock(param);
+    moreStock();
     console.log(quantity);
     $("#quantity").html(quantity);
 });
 
-function moreStock(param='new') {
-    console.log(param)
-    var txt = '';
-    var args = "?product=";
-    if (param == 'new') {
-        // var whichVars = [];
-        $.each(items, function (i, item) {
-            idx = chance.integer({min: 0, max: item.length - 1});
-            txt += item[idx];
-            args += idx + "_"
-        });
-    }
-    $stock.html(txt);
-    history.pushState({},
-        'Random Pitch ' + txt, args.slice(0, args.length - 1))
+function randomText() {
+    var txt = "";
+    // var whichVars = [];
+    $.each(items, function (i, item) {
+        idx = chance.integer({min: 0, max: item.length - 1});
+        txt += item[idx];
+        txt += " ";
+    });
+    console.log(txt);
+
+    txt = txt.slice(0, -1);
+    txt = txt.replace(" ,",",");
+    txt = txt.replace(" .",".");
+    txt = txt.replace(" .",".");
+    txt = txt.replace(" :",":");
+    txt = txt.replace("  "," ");
+    console.log();
+    return txt
+}
+
+
+function moreStock() {
+    loader();
+    txt = randomText();
+    setTimeout(function () {
+        $stock.html(txt);
+    }, 1000)
+    // return whichVars;
+}
+
+function random_text() {
+    var arr = [
+        "Making the slides",
+        "Practicing the pitch",
+        "Innovating",
+        "Here's the elevator pitch"
+
+    ];
+    idx = chance.integer({min: 0, max: arr.length - 1});
+    return arr[idx]
+}
+
+function loader() {
+    var base = random_text();
+    var loadgif = '<img id="loader" src="loader.gif" height="30" alt="loader">';
+    base = loadgif + base + loadgif;
+    $stock.html(base);
 }
 
 function itemRemove() {
@@ -50,20 +70,27 @@ function itemRemove() {
 }
 
 
+function addToCart() {
+    var currentItem = $stock.html();
+    $cart.append('<li class="list-group-item">' +
+        currentItem +
+        '<a href="#" class="badge badge-default pull-left cart-remove"> X </a></li>');
+    // console.log(currentItem)
+}
+
+
 $("#change-stock").click(moreStock);
-$cart.on("click", "li .cart-remove", itemRemove);
-$("#add-to-cart").click(addToCart);
+// $cart.on("click", "li .cart-remove", itemRemove);
+// $("#add-to-cart").click(addToCart);
 $("#fb-share").on("click", function () {
     var currentItem = $stock.html();
     FB.ui({
 
         method: 'share',
         display: 'popup',
-        href: 'http://deanla.com/stock/',
-        quote: "קניתי " + currentItem +
-            " בחנות הראנדום סטוק!!! " +
-            "",
-        hashtag: "$RANDOM_STOCK"
+        href: 'http://deanla.com/coalition/',
+        quote: currentItem,
+        hashtag: "$COALITION"
     }, function (response) {
     });
 });
@@ -97,3 +124,31 @@ $("body").keypress(function (event) {
 if ($.browser.mobile) {
     $(".web-only").hide()
 }
+// var csvContent = "data:text/csv;charset=utf-8,";
+// var draws = [];
+
+
+////////DATA DOWNLOAD
+// $("#fb-share").on("click", function () {
+//     for (var i = 0; i < 100000; i++) {
+//         res = moreStock();
+//         draws.push(res);
+//         // console.log(i);
+//     }
+//     // console.log(draws)
+//     draws.forEach(function (nums, index) {
+//         dataString = nums.join(",");
+//         csvContent += index < draws.length ? dataString + "\n" : dataString;
+//     })
+//     var encodedUri = encodeURI(csvContent);
+//     // window.open(encodedUri);
+//     // $(this).setAttribute("href")
+//     var link = document.createElement("a");
+//     link.setAttribute("href", encodedUri);
+//     link.setAttribute("download", "my_data.csv");
+//     document.body.appendChild(link); // Required for FF
+//
+//     link.click(); //
+// });
+
+

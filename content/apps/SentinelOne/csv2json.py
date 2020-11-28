@@ -1,6 +1,5 @@
-import json
-
 import pandas as pd
+import json
 
 df = pd.read_csv('data.csv', delimiter='\t')
 

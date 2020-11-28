@@ -50,18 +50,22 @@
             </a>
         {% endif %}
         <div class="entry-content">
-            {% for quote in QUOTES %}
+            {#            <h1>{{ TALKS }}</h1>#}
+            {% for talk in TALKS %}
                 <div class="row on-list well">
 
-                    <div class="col-sm-12">
-                        <blockquote class="blockquote">
-                            <p class="mb-0">{{ quote[0] }}</p>
-                            <footer class="blockquote-footer">{{ quote [1]}}</footer>
-                        </blockquote>
+                    <div class="col-sm-12  text-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ talk[0] }}"
+                                frameborder="10"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <h1>{{ talk[2] }}</h1>
+                        <h2>{{ talk[1] }}</h2>
                     </div>
                 </div>
             {% endfor %}
-{#            {{ page.content }}#}
+
+            {#            {{ page.content }}#}
             {% if page.comments == 'enabled' %}
                 {% include 'includes/comments.html' %}
             {% endif %}

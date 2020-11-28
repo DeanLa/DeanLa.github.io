@@ -2,11 +2,11 @@ body {
     /*height: 100%;*/
     width: 100%;
     /*position: relative;*/
-    font-family: 'Alef', sans-serif;
+    /*font-family: 'Alef', sans-serif;*/
 }
 
 #bg {
-    background-image: url('bg.jpeg');
+    background-image: url('bg.png');
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -29,14 +29,13 @@ body {
     margin-bottom: 0;
     min-height: 80%;
     opacity: 0.85;
-    border: #000000 20px solid ;
+    border: #6b0aea 10px solid;
     border-radius: 20px;
 }
 
 #main-gen {
     margin: 20px 0 35px 0;
-    min-height: 80px;
-    direction: rtl;
+    min-height: 210px;
 
 }
 
@@ -45,12 +44,12 @@ body {
 }
 
 p, h2, h3, h4 {
-    direction: rtl;
+    /*direction: rtl;*/
 }
 
 #head-logo {
-    font-family: 'Alef', sans-serif;
-    background-image: url('bgtop.png');
+    /*font-family: 'Alef', sans-serif;*/
+    background-image: url('bgtop.jpeg');
     background-repeat: repeat;
     /*background-color: black;*/
     background-size: auto;
@@ -70,7 +69,7 @@ p, h2, h3, h4 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Alef', sans-serif;
+    /*font-family: 'Alef', sans-serif;*/
 }
 
 #change-stock {
@@ -85,4 +84,39 @@ h1, h2, h3, h4, h5, h6 {
 
 li {
     margin-bottom: 10px;
+}
+
+.btn-purple {
+    color: #fff;
+    background-color: #6b0aea;
+    border-color: #4303F3
+}
+
+.btn-purple:focus, .btn-purple:hover {
+    color: #fff;
+    background-color: #4303F3;
+    border-color: #4303F3
+}
+
+#head-logo img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+    display: inline;
+}
+
+.well#pitch {
+    border: #6b0aea 2px solid;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+#instructions{
+    font-size: 0.75em;
 }

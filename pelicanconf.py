@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*- #
 # from __future__ import unicode_literals
 
+from blog.content import TALKS, QUOTES
+
 AUTHOR = 'Dean Langsam'
 SITENAME = 'DeanLa'
 # SITEURL = ''
@@ -112,3 +114,4 @@ GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'auto'
 # Comments
 DISQUS_SITENAME = "deanla"
 DISQUS_DISPLAY_COUNTS = True
+
