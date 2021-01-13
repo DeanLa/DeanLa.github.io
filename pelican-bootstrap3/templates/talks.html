@@ -11,6 +11,7 @@
         <meta name="description" content="{{ page.summary|striptags|escape }}"/>
     {% endif %}
 {% endblock %}
+
 {% block opengraph %}
     {% if OPEN_GRAPH_FB_APP_ID %}
         <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
@@ -32,12 +33,9 @@
 {% block canonical_rel %}
     <link rel="canonical" href="{{ SITEURL }}/{{ page.url }}">
 {% endblock %}
-{#{% set quotes = [(#}
-{#"A computer gives us words to do things. A software engineer makes new words to make computers easier to use","Raymond Hettinger"),#}
-{#("Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "Martin Fowler"),#}
-{#("All models are wrong, but some are useful","George E.P. Box")#}
-{#        ] %}#}
+
 {% block content %}
+
     <section id="content" class="body">
         {% if page.title %}
             <h1 class="entry-title">{{ page.title }}</h1>
@@ -50,20 +48,20 @@
             </a>
         {% endif %}
         <div class="entry-content">
-            {#            <h1>{{ TALKS }}</h1>#}
-            {% for talk in TALKS %}
-                <div class="row on-list well">
-
-                    <div class="col-sm-12  text-center">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ talk[0] }}"
-                                frameborder="10"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        <h1>{{ talk[2] }}</h1>
-                        <h2>{{ talk[1] }}</h2>
+            {% set w=6 %}
+            <div class="row on-list ">
+                {% for talk in page.content.split('\n') %}
+                    {% set talk=(talk|striptags).split('|') %}
+                    <div class="col-sm-{{ w }} text-center well wellpad" style="width: {{ w * 90 / 12 }}%">
+                        <div class='embed-container'>
+                            <iframe src='https://www.youtube.com/embed//{{ talk[0] }}' frameborder='10'
+                                    allowfullscreen></iframe>
+                        </div>
+                        <h1>{{ talk[2].strip() }}</h1>
+                        <p>{{ talk[1].strip() }}</p>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
 
             {#            {{ page.content }}#}
             {% if page.comments == 'enabled' %}

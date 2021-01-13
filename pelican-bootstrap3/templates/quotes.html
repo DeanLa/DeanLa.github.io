@@ -50,18 +50,19 @@
             </a>
         {% endif %}
         <div class="entry-content">
-            {% for quote in QUOTES %}
+            {% for quote in page.content.split('\n') %}
+                {% set quote=(quote|striptags).split('|') %}
                 <div class="row on-list well">
 
                     <div class="col-sm-12">
                         <blockquote class="blockquote">
-                            <p class="mb-0">{{ quote[0] }}</p>
-                            <footer class="blockquote-footer">{{ quote [1]}}</footer>
+                            <p class="mb-0">{{ quote[0].strip() }}</p>
+                            <footer class="blockquote-footer">{{ quote [1].strip() }}</footer>
                         </blockquote>
                     </div>
                 </div>
             {% endfor %}
-{#            {{ page.content }}#}
+            {#            {{ page.content }}#}
             {% if page.comments == 'enabled' %}
                 {% include 'includes/comments.html' %}
             {% endif %}
