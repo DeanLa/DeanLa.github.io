@@ -6,7 +6,8 @@ body {
 }
 
 #bg {
-    background-image: url('bg.jpg');
+    /*background-image: url('bg.jpg');*/
+    background-color: #EBEBEB;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -24,12 +25,13 @@ body {
 
 .container {
     /*position: relative;*/
+    background-color: white;
     padding: 30px;
     margin-top: 15px;
     margin-bottom: 0;
     min-height: 80%;
-    opacity: 0.85;
-    border: purple 10px solid;
+    opacity: 1;
+    border: #00C800 10px solid;
     border-radius: 20px;
 }
 
@@ -65,7 +67,7 @@ p, h2, h3, h4 {
    -webkit-text-stroke: 1px black;
    color: white;
    text-shadow:
-       3px 3px 0 #000,
+       1px 1px 0 #000,
      -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
@@ -76,7 +78,7 @@ p, h2, h3, h4 {
 }
 
 #head-logo h2{
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 .btn {
