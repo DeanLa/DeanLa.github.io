@@ -1,0 +1,108 @@
+body {
+    /*height: 100%;*/
+    width: 100%;
+    /*position: relative;*/
+    font-family: 'Alef', sans-serif;
+}
+
+#bg {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /*opacity: 0.5;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0.6;
+}
+
+#cart-well {
+    background-color: #dbdbdb;
+}
+
+.container {
+    /*position: relative;*/
+    padding: 30px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    min-height: 80%;
+    opacity: 0.85;
+    border: purple 10px solid;
+    border-radius: 20px;
+}
+
+#stock {
+    /*margin: 20px 0 35px 0;*/
+    min-height: 80px;
+    direction: rtl;
+
+}
+
+.follow {
+    margin-top: 20px;
+}
+
+p, h2, h3, h4 {
+    direction: rtl;
+}
+
+#head-logo {
+    font-family: 'Alef', sans-serif;
+    /*background-image: url('logoz.jpg');*/
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0);
+    /*opacity: 0;*/
+    background-size: auto;
+    color: white;
+    width: 100%;
+    margin: 0;
+    min-height: 100px;
+}
+
+#head-logo h1, h2 {
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+#head-logo h1{
+    font-size: 4em;
+}
+
+#head-logo h2{
+    font-size: 2.5em;
+}
+
+.btn {
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    width: 90%;
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alef', sans-serif;
+    font-weight: 200;
+}
+
+#change-stock {
+    font-size: 2em;
+
+}
+
+#add-to-cart {
+    font-size: 1.5em;
+
+}
+
+li {
+    margin-bottom: 10px;
+}
